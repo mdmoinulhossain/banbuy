@@ -1,0 +1,10 @@
+.elementor-870 .elementor-element.elementor-element-d23946f{margin-top:0px;margin-bottom:0px;padding:0px 0px 0px 0px;}.elementor-870 .elementor-element.elementor-element-4372f06 > .elementor-element-populated{margin:0px 0px 0px 0px;padding:0px 0px 0px 0px;}#elementor-popup-modal-870 .dialog-message{width:120px;height:auto;}#elementor-popup-modal-870{justify-content:flex-end;align-items:center;}#elementor-popup-modal-870 .dialog-close-button{display:block;top:-12px;background-color:#000000;font-size:15px;}#elementor-popup-modal-870 .dialog-widget-content{background-color:#FFFFFF00;border-radius:50% 50% 50% 50%;}body:not(.rtl) #elementor-popup-modal-870 .dialog-close-button{right:0px;}body.rtl #elementor-popup-modal-870 .dialog-close-button{left:0px;}#elementor-popup-modal-870 .dialog-close-button i{color:#FFFFFF;}/* Start custom CSS */.dialog-close-button {
+    height: 20px;
+    width: 20px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    position:absolute;
+}
+.dialog-close-button i{
+    position: relative;
+}/* End custom CSS */
