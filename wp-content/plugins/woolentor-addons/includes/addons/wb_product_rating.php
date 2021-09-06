@@ -31,7 +31,7 @@ class WL_Product_Rating_Element extends Widget_Base {
         return ['product rating','rating'];
     }
 
-    protected function _register_controls() {
+    protected function register_controls() {
 
         // Product Rating Style
         $this->start_controls_section(

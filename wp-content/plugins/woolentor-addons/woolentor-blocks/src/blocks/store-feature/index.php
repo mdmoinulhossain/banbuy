@@ -46,9 +46,7 @@ class WooLentorBlocks_Store_Feature{
 			$metadata['name'],
 			array(
 				'attributes'  => $metadata['attributes'],
-				'render_callback' => [ $this, 'render_content' ],
-				'editor_style'    => 'woolentor-store-feature',
-				'style'			  => 'woolentor-store-feature'
+				'render_callback' => [ $this, 'render_content' ]
 			)
 		);
 
@@ -56,7 +54,7 @@ class WooLentorBlocks_Store_Feature{
 
 	public function render_content( $settings, $content ){
 		
-		$uniqClass = 'woolentor-'.$settings['blockUniqId'];
+		$uniqClass = 'woolentorblock-'.$settings['blockUniqId'];
 		$areaClasses = array('woolentor-store-feature-area');
 		$classes = array( $uniqClass, 'woolentor-blocks ht-feature-wrap' );
 
@@ -68,53 +66,10 @@ class WooLentorBlocks_Store_Feature{
 
 		$store_image = !empty( $settings['featureImage']['id'] ) ? wp_get_attachment_image( $settings['featureImage']['id'], 'full' ) : '';
 
-		/** Custom Styles */
-		$areaBorderColor = woolentorBlocks_generate_css( $settings, 'areaBorderColor', 'border-color' );
-		$areaHoverBorderColor = woolentorBlocks_generate_css( $settings, 'areaHoverBorderColor', 'border-color', ' !important' );
-		$areaBackgroundColor = woolentorBlocks_generate_css( $settings, 'areaBackgroundColor', 'background-color' );
-		$areaMargin = woolentorBlocks_Dimention_Control( $settings, 'areaMargin', 'margin' );
-		$areaPadding = woolentorBlocks_Dimention_Control( $settings, 'areaPadding', 'padding' );
-
-		$titleColor = woolentorBlocks_generate_css( $settings, 'titleColor', 'color' );
-		$titleSize = woolentorBlocks_generate_css( $settings, 'titleSize', 'font-size' );
-		$titleMargin = woolentorBlocks_Dimention_Control( $settings, 'titleMargin', 'margin' );
-
-		$subTitleColor = woolentorBlocks_generate_css( $settings, 'subTitleColor', 'color' );
-		$subTitleSize = woolentorBlocks_generate_css( $settings, 'subTitleSize', 'font-size' );
-		$subTitleMargin = woolentorBlocks_Dimention_Control( $settings, 'subTitleMargin', 'margin' );
-
-		$all_styles = "
-
-			.{$uniqClass}.ht-feature-wrap{
-				{$areaBackgroundColor}
-			}
-			.{$uniqClass}.ht-feature-wrap .ht-feature-inner{
-				{$areaBorderColor}
-				{$areaMargin}
-				{$areaPadding}
-			}
-			.{$uniqClass}.ht-feature-wrap:hover .ht-feature-inner{
-				{$areaHoverBorderColor}
-			}
-			.{$uniqClass}.ht-feature-wrap .ht-feature-content h4{
-				{$titleColor}
-				{$titleSize}
-				{$titleMargin}
-			}
-			.{$uniqClass}.ht-feature-wrap .ht-feature-content p{
-				{$subTitleColor}
-				{$subTitleSize}
-				{$subTitleMargin}
-			}
-
-		";
-
 		ob_start();
 		?>
-			<style><?php echo $all_styles; ?></style>
 			<div class="<?php echo implode(' ', $areaClasses ); ?>">
 				<div class="<?php echo implode(' ', $classes ); ?>">
-
 					<div class="ht-feature-inner">
 						<?php
 							if( !empty( $store_image ) ){
@@ -132,7 +87,6 @@ class WooLentorBlocks_Store_Feature{
 							?>
 						</div>
 					</div>
-
 				</div>
 			</div>
 		<?php

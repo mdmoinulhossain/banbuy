@@ -33,7 +33,7 @@ class WL_Product_Filter_Element extends Widget_Base {
         return ['woolentor','shop','filter','product filter'];
     }
 
-    protected function _register_controls() {
+    protected function register_controls() {
 
         $filter_by = [
             'search_form'  => esc_html__( 'Search Form', 'woolentor' ),

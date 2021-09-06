@@ -39,7 +39,7 @@ class WL_Brand_Element extends Widget_Base {
         return ['brand','brand logo','logo','custom brand','custom logo'];
     }
 
-    protected function _register_controls() {
+    protected function register_controls() {
 
         $this->start_controls_section(
             'section_content',

@@ -41,7 +41,7 @@ class Woolentor_Product_Image_Accordion_Layout_Widget extends Widget_Base {
         return ['slider','product','universal','universal product','universal layout'];
     }
 
-    protected function _register_controls() {
+    protected function register_controls() {
 
         // Product Query
 

@@ -46,7 +46,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
         return ['product tab','tab','tabs','tab with product','product'];
     }
 
-    protected function _register_controls() {
+    protected function register_controls() {
 
         $this->start_controls_section(
             'woolentor-products',

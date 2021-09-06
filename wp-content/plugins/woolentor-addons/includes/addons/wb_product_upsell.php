@@ -31,7 +31,7 @@ class WL_Product_Upsell_Element extends Widget_Base {
         return ['product','upsell','upsell product'];
     }
 
-    protected function _register_controls() {
+    protected function register_controls() {
 
         $this->start_controls_section(
             'product_upsell_content',

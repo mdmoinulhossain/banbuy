@@ -45,10 +45,16 @@ class WooLentorBlocks_Product_Tab{
 			array(
 				'attributes'  => $metadata['attributes'],
 				'render_callback' => [ $this,'product_tab_render' ],
-				'editor_script'   => 'slick',
-				'editor_style'    => register_block_style_handle( $metadata, 'woolentor-widgets' ),
 				'script'          => 'slick',
 			)
+
+			// array(
+			// 	'attributes'  => $metadata['attributes'],
+			// 	'render_callback' => [ $this,'product_tab_render' ],
+			// 	'editor_script'   => 'slick',
+			// 	'editor_style'    => 'woolentor-widgets',
+			// 	'script'          => 'slick',
+			// )
 		);
 
 	}
@@ -84,7 +90,7 @@ class WooLentorBlocks_Product_Tab{
         if( $custom_order == true ){
 			$orderby = $settings['orderBy'];
 			$order 	 = $settings['order'];
-            $query_args['custom_order'] = array(
+            $query_args['custom_order'] = array (
                 'orderby' => $orderby,
                 'order' => $order,
             );
@@ -124,72 +130,20 @@ class WooLentorBlocks_Product_Tab{
 		}
 
 		if( ( $proslider == 'yes' ) && ( $producttab != 'yes' ) ){
-			$collumval = 'slide-item ht-col-xs-12';
+			$collumval = 'slide-item woolentor-col-1';
 		}else{
-			$collumval = 'ht-col-lg-3 ht-col-md-6 ht-col-sm-6 ht-col-xs-12 mb-50';
-			if( $columns !='' ){
-				if( $columns == 5){
-					$collumval = 'cus-col-5 ht-col-md-6 ht-col-sm-6 ht-col-xs-12 mb-50';
-				}else{
-					$colwidth = round(12/$columns);
-					$collumval = 'ht-col-lg-'.$colwidth.' ht-col-md-6 ht-col-sm-6 ht-col-xs-12 mb-50';
-				}
-			}
+			$collumval = !empty( $settings['columns'] ) ? 'woolentor-col-'.$settings['columns'] : 'woolentor-col-4';
 		}
 
 		$tabuniqid = $settings['blockUniqId'];
-		$uniqClass = 'woolentor-'.$settings['blockUniqId'];
+		$uniqClass = 'woolentorblock-'.$settings['blockUniqId'];
 		$customClass .= ' '.$uniqClass;
 		!empty( $settings['className'] ) ? $customClass .= ' '.$settings['className'] : '';
 
-		/** Custom Styles */
-		$titleColor = woolentorBlocks_generate_css( $settings, 'titleColor', 'color' );
-		$titleHoverColor = woolentorBlocks_generate_css( $settings, 'titleHoverColor', 'color' );
-		$titleAlignment = woolentorBlocks_generate_css( $settings, 'titleAlign', 'text-align' );
-
-		$priceColor = woolentorBlocks_generate_css( $settings, 'priceColor', 'color' );
-		$contentAlign = woolentorBlocks_generate_css( $settings, 'contentAlign', 'text-align' );
-
-		$actionBtnColor = woolentorBlocks_generate_css( $settings, 'actionBtnColor', 'color' );
-		$actionBtnBgColor = woolentorBlocks_generate_css( $settings, 'actionBtnBgColor', 'background-color' );
-		$actionBtnHoverColor = woolentorBlocks_generate_css( $settings, 'actionBtnHoverColor', 'color' );
-		$actionBtnHoverBgColor = woolentorBlocks_generate_css( $settings, 'actionBtnHoverBgColor', 'background-color' );
-
-		$all_styles = "
-            .{$uniqClass} .product-item .product-inner .content .title a{
-                {$titleColor}
-            }
-			.{$uniqClass} .product-item .product-inner .content .title a:hover{
-                {$titleHoverColor}
-            }
-			.{$uniqClass} .product-item .product-inner .content .title{
-                {$titleAlignment}
-            }
-			.{$uniqClass} .product-item .product-inner .content .price,.{$uniqClass} .product-item .product-inner .content .price .amount{
-                {$priceColor}
-            }
-			.{$uniqClass} .product-item .product-inner .content{
-                {$contentAlign}
-            }
-			.{$uniqClass} .product-item .actions a, .{$uniqClass} .product-item .woocommerce.compare-button a.button, .{$uniqClass} .product-item .actions a::before{
-                {$actionBtnColor}
-            }
-			.{$uniqClass} .product-item .actions{
-				{$actionBtnBgColor}
-			}
-			.{$uniqClass} .product-item .actions a:hover, .{$uniqClass} .product-item .woocommerce.compare-button a.button:hover, .{$uniqClass} .product-item .actions a:hover::before{
-                {$actionBtnHoverColor}
-            }
-			.{$uniqClass} .product-item .actions:hover{
-				{$actionBtnHoverBgColor}
-			}
-        ";
-
 		ob_start();
 		?>
-		<style><?php echo $all_styles; ?></style>
 		<div class="<?php echo $customClass; ?>">
-			<div class="product-style">
+			<div class="woolentor-product-tab-area <?php echo !empty( $settings['columns'] ) ? 'woolentor-columns-'.$settings['columns'] : 'woolentor-columns-1'; ?>">
 
 			<?php if ( $producttab == 'yes' ) { ?>
                 <div class="product-tab-list ht-text-center">
@@ -276,8 +230,9 @@ class WooLentorBlocks_Product_Tab{
 
 						if( $products->have_posts() ):
 				?>
-					<div class="ht-tab-pane <?php if($j==1){echo 'htactive';} ?>" id="<?php echo 'woolentortab'.$tabuniqid.$j;?>">
-						<div class="ht-row">
+					<div class="ht-tab-pane <?php if( $j==1 ){ echo 'htactive'; } ?>" id="<?php echo 'woolentortab'.$tabuniqid.$j;?>">
+						<div class="woolentor-row">
+
 							<!-- product item start -->
 							<div class="<?php echo esc_attr( $collumval );?>">
 							<?php
@@ -299,7 +254,7 @@ class WooLentorBlocks_Product_Tab{
                 <?php endif; endforeach;?>
 
 			<?php else:?>
-				<div class="ht-row">
+				<div class="woolentor-row">
 
 					<?php if( $proslider == 'yes' ){ echo '<div id="product-slider-' . $settings['blockUniqId'] . '" dir="'.$direction.'" class="product-slider" data-settings=\'' . wp_json_encode($slider_settings) . '\'>';}?>
 						
@@ -340,7 +295,7 @@ class WooLentorBlocks_Product_Tab{
 		$rows = $settings['rows'];
 
 		?>
-		<div class="product-item <?php if ( $rows > 1 && ($loopitem % $rows != 0)){ echo 'mb-30 ';} if( $settings['style'] == 3){ echo 'product_style_three'; }?> ">
+		<div class="product-item <?php if ( $rows > 1 && ( $loopitem % $rows != 0 ) ){ echo 'mb-30 ';} if( $settings['style'] == 3){ echo 'product_style_three'; }?> ">
 
 			<div class="product-inner">
 				<div class="image-wrap">

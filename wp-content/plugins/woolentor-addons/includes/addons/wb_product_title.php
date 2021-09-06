@@ -31,7 +31,7 @@ class WL_Product_Title_Element extends Widget_Base {
         return ['product title','product','title'];
     }
 
-    protected function _register_controls() {
+    protected function register_controls() {
 
 
         // Slider Button stle

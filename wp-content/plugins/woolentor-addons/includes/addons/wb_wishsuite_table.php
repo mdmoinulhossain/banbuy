@@ -36,7 +36,7 @@ class WL_Wishsuite_Table_Element extends Widget_Base {
         return ['wishlist','product wishlist','wishsuite'];
     }
 
-    protected function _register_controls() {
+    protected function register_controls() {
 
         // Content
         $this->start_controls_section(

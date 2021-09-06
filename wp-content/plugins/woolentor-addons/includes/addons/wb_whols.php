@@ -35,7 +35,7 @@ class WL_Whols_Element extends Widget_Base {
         return ['whols','whole sale','woocommerce sale'];
     }
 
-    protected function _register_controls() {
+    protected function register_controls() {
 
         // Button Style
         $this->start_controls_section(

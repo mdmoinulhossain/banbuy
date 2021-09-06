@@ -45,10 +45,8 @@ class WooLentorBlocks_Brand_Logo{
 		register_block_type(
 			$metadata['name'],
 			array(
-				'attributes'  => $metadata['attributes'],
-				'render_callback' => [ $this, 'render_content' ],
-				'editor_style'    => 'woolentor-store-feature',
-				'style'			  => 'woolentor-store-feature'
+				'attributes'  	  => $metadata['attributes'],
+				'render_callback' => [ $this, 'render_content' ]
 			)
 		);
 
@@ -56,77 +54,34 @@ class WooLentorBlocks_Brand_Logo{
 
 	public function render_content( $settings, $content ){
 		
-		$uniqClass = 'woolentor-'.$settings['blockUniqId'];
-		$classes = array( $uniqClass, 'ht-brand-wrap' );
+		$uniqClass 	 = 'woolentorblock-'.$settings['blockUniqId'];
+		$classes 	 = array( $uniqClass, 'ht-brand-wrap' );
 		$areaClasses = array( 'woolentor-brand-area' );
 
 		!empty( $settings['align'] ) ? $areaClasses[] = 'align'.$settings['align'] : '';
 
-        !empty( $settings['columns'] ) ? $classes[] = 'wl-columns-'.$settings['columns'] : 'wl-columns-6';
+        !empty( $settings['columns'] ) ? $classes[] = 'woolentor-columns-'.$settings['columns'] : 'woolentor-columns-6';
 
 		$default_img = '<img src="'.WOOLENTOR_BLOCK_URL.'/src/assets/images/brand.png'.'" alt="'.esc_html__('Brand Logo','woolentor').'">';
 		$brands = $settings['brandLogoList'];
 
-
-		/** Custom Styles */
-		$singleItemAreaBorderType = woolentorBlocks_generate_css( $settings, 'singleItemAreaBorderType', 'border-style' );
-		$singleItemAreaBorderWidth = woolentorBlocks_Dimention_Control( $settings, 'singleItemAreaBorderWidth', 'border-width' );
-		$singleItemAreaBorderRadius = woolentorBlocks_Dimention_Control( $settings, 'singleItemAreaBorderRadius', 'border-radius' );
-		$singleItemAreaMargin = woolentorBlocks_Dimention_Control( $settings, 'singleItemAreaMargin', 'margin' );
-		$singleItemAreaPadding = woolentorBlocks_Dimention_Control( $settings, 'singleItemAreaPadding', 'padding' );
-		$brandAlignment = woolentorBlocks_generate_css( $settings, 'brandAlignment', 'text-align' );
-		$singleItemAreaBorderColor = woolentorBlocks_generate_css( $settings, 'singleItemAreaBorderColor', 'border-color' );
-
-		$brandImageBorderType = woolentorBlocks_generate_css( $settings, 'brandImageBorderType', 'border-style' );
-		$brandImageBorderWidth = woolentorBlocks_Dimention_Control( $settings, 'brandImageBorderWidth', 'border-width' );
-		$brandImageBorderRadius = woolentorBlocks_Dimention_Control( $settings, 'brandImageBorderRadius', 'border-radius' );
-		$brandImageBorderColor = woolentorBlocks_generate_css( $settings, 'brandImageBorderColor', 'border-color' );
-
-		$itemSpace = ! $settings['noGutter'] ? $settings['itemSpace'] : '0';
-
-		$all_styles = "
-			.{$uniqClass} .wl-single-brand{
-				{$singleItemAreaBorderType}
-				{$singleItemAreaBorderWidth}
-				{$singleItemAreaBorderRadius}
-				{$singleItemAreaMargin}
-				{$singleItemAreaPadding}
-				{$brandAlignment}
-				{$singleItemAreaBorderColor}
-			}
-			.{$uniqClass} .wl-single-brand img{
-				{$brandImageBorderType}
-				{$brandImageBorderWidth}
-				{$brandImageBorderRadius}
-				{$brandImageBorderColor}
-			}
-			.{$uniqClass} .wl-row > [class*='col-']{
-				padding: 0  {$itemSpace}px;
-			}
-		";
-
 		ob_start();
+		
 		?>
-			<style><?php echo $all_styles; ?></style>
 			<div class="<?php echo implode(' ', $areaClasses ); ?>">
 				<div class="<?php echo implode(' ', $classes ); ?>">
 					<?php
-						$collumval = 'wl-col-6';
+						$collumval = 'woolentor-col-6';
 						if( !empty( $settings['columns'] ) ){
-							$collumval = 'wl-col-'.$settings['columns'];
+							$collumval = 'woolentor-col-'.$settings['columns'];
 						}
 						
 						if( is_array( $brands ) ){
-							echo '<div class="wl-row '.( $settings['noGutter'] === true ? 'wlno-gutters' : '' ).'">';
+							echo '<div class="woolentor-row '.( $settings['noGutter'] === true ? 'wlno-gutters' : '' ).'">';
 								foreach ( $brands as $key => $brand ) {
 				
 									$image = !empty( $brand['image']['id'] ) ? wp_get_attachment_image( $brand['image']['id'], 'full' ) : $default_img;
-				
-									if( !empty( $brand['link'] ) ){
-										$logo = sprintf('<a href="%s" target="_blank">%s</a>',esc_url( $brand['link'] ), $image );
-									}else{
-										$logo = $image;
-									}
+									$logo  = !empty( $brand['link'] ) ? sprintf('<a href="%s" target="_blank">%s</a>',esc_url( $brand['link'] ), $image ) : $image;
 				
 									?>
 										<div class="<?php echo esc_attr( esc_attr( $collumval ) ); ?>">

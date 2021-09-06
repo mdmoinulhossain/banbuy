@@ -35,7 +35,7 @@ class Woolentor_Elementor_Widget_Archive_Product extends Widget_Base {
         return ['archive','shop','product archive','default archive'];
     }
 
-    protected function _register_controls() {
+    protected function register_controls() {
 
         $this->start_controls_section(
             'product-archive-conent',

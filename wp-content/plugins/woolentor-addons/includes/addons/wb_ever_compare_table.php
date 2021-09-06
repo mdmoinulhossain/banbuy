@@ -36,7 +36,7 @@ class WL_EverCompare_Table_Element extends Widget_Base {
         return ['compare','product compare','ever compare'];
     }
 
-    protected function _register_controls() {
+    protected function register_controls() {
 
         // Content
         $this->start_controls_section(

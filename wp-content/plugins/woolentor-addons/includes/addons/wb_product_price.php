@@ -31,7 +31,7 @@ class WL_Product_Price_Element extends Widget_Base {
         return ['price','product price'];
     }
 
-    protected function _register_controls() {
+    protected function register_controls() {
 
         // Product Price Style
         $this->start_controls_section(

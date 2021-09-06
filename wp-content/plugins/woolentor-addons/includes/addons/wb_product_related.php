@@ -31,7 +31,7 @@ class WL_Product_Related_Element extends Widget_Base {
         return ['related','product','related product'];
     }
 
-    protected function _register_controls() {
+    protected function register_controls() {
 
 
         // Related Product Content

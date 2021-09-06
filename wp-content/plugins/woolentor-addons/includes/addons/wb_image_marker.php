@@ -31,7 +31,7 @@ class WL_Image_Marker_Element extends Widget_Base {
         return ['image marker','marker','product indicator'];
     }
 
-    protected function _register_controls() {
+    protected function register_controls() {
 
         $this->start_controls_section(
             'image_marker_image_section',

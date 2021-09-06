@@ -48,7 +48,7 @@ class Woolentor_Universal_Product_Layout_Widget extends Widget_Base {
         return ['slider','product','universal','universal product','universal layout'];
     }
 
-    protected function _register_controls() {
+    protected function register_controls() {
 
         // Product Content
         $this->start_controls_section(

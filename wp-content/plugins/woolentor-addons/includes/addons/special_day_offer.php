@@ -35,7 +35,7 @@ class Woolentor_Elementor_Widget_Special_day_Banner extends Widget_Base {
         return['offer','day','day offer','special offer','special day'];
     }
 
-    protected function _register_controls() {
+    protected function register_controls() {
 
         $this->start_controls_section(
             'add_banner_content',

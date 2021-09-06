@@ -30,7 +30,7 @@ class WL_Product_Meta_Element extends Widget_Base {
         return ['meta','product meta','meta info'];
     }
 
-    protected function _register_controls() {
+    protected function register_controls() {
 
         // Product Price Style
         $this->start_controls_section(

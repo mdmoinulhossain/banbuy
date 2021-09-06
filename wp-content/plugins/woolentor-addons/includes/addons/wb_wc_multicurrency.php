@@ -35,7 +35,7 @@ class WL_Multi_Currency_Element extends Widget_Base {
         return ['multi currency','currency','woocommerce currency'];
     }
 
-    protected function _register_controls() {
+    protected function register_controls() {
 
         // Content
         $this->start_controls_section(

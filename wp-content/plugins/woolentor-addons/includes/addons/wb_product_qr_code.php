@@ -31,7 +31,7 @@ class Woolentor_Elementor_Widget_QR_code extends Widget_Base {
         return ['qrcode','qrcode generate','product qr code','qr code for product'];
     }
 
-    protected function _register_controls() {
+    protected function register_controls() {
 
         $this->start_controls_section(
             'qrcode-conent',

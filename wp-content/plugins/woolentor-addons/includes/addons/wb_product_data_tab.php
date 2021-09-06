@@ -31,7 +31,7 @@ class WL_Product_Product_Data_Tabs_Element extends Widget_Base {
         return ['product','data tab','product tabs','tabs','product info tab'];
     }
 
-    protected function _register_controls() {
+    protected function register_controls() {
 
         // Product Style
         $this->start_controls_section(

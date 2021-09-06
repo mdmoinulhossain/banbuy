@@ -31,7 +31,7 @@ class WL_Product_Image_Element extends Widget_Base {
         return ['image','product image','product thumbnail'];
     }
 
-    protected function _register_controls() {
+    protected function register_controls() {
 
         // Product Image Style
         $this->start_controls_section(

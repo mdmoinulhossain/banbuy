@@ -31,7 +31,7 @@ class WL_Product_Description_Element extends Widget_Base {
         return ['description','product description','product content'];
     }
 
-    protected function _register_controls() {
+    protected function register_controls() {
 
         // Product Style
         $this->start_controls_section(

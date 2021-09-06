@@ -35,7 +35,7 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
         return ['suggest price','price'];
     }
 
-    protected function _register_controls() {
+    protected function register_controls() {
 
         $this->start_controls_section(
             'product_suggest_price',

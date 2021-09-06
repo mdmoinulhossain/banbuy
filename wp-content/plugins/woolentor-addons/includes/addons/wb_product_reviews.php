@@ -31,7 +31,7 @@ class WL_Product_Reviews_Element extends Widget_Base {
         return ['reviews','product review','review form','form'];
     }
 
-    protected function _register_controls() {
+    protected function register_controls() {
 
         $this->start_controls_section(
             'section_content',

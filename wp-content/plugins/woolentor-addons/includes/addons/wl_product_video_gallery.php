@@ -38,7 +38,7 @@ class WL_Product_Video_Gallery_ELement extends Widget_Base {
         return ['video','gallery','product video gallery'];
     }
 
-    protected function _register_controls() {
+    protected function register_controls() {
 
          $this->start_controls_section(
             'product_thumbnails_content',
@@ -305,6 +305,40 @@ class WL_Product_Video_Gallery_ELement extends Widget_Base {
                     
             </div>
         </div>
+
+         <script>
+            ;jQuery(document).ready(function($) {
+                'use strict';
+
+                var $default_data = {
+                    src:'',
+                    srcfull:'',
+                    srcset:'',
+                    sizes:'',
+                    width:'',
+                    height:'',
+                };
+                $( '.single_variation_wrap' ).on( 'show_variation', function ( event, variation ) {
+
+                    // Get First image data
+                    if( $default_data.src.length === 0 ){
+                        $default_data.srcfull = $('.woolentor-product-gallery-video').find('.video-cus-tab-pane.htactive img').attr('src');
+                        $default_data.src = $('.woolentor-product-gallery-video').find('.video-cus-tab-pane.htactive img').attr('src');
+                        $default_data.srcset = $('.woolentor-product-gallery-video').find('.video-cus-tab-pane.htactive img').attr('srcset');
+                    }
+
+                    $('.woolentor-product-gallery-video').find('.video-cus-tab-pane.htactive img').wc_set_variation_attr('src',variation.image.full_src);
+                    $('.woolentor-product-gallery-video').find('.video-cus-tab-pane.htactive img').wc_set_variation_attr('srcset',variation.image.srcset);
+                    $('.woolentor-product-gallery-video').find('.video-cus-tab-pane.htactive img').wc_set_variation_attr('src',variation.image.src);
+
+                    $('.variations').find('.reset_variations').on('click', function(e){
+                        $('.woolentor-product-gallery-video').find('.video-cus-tab-pane.htactive img').wc_set_variation_attr('src', $default_data.srcfull );
+                        $('.woolentor-product-gallery-video').find('.video-cus-tab-pane.htactive img').wc_set_variation_attr('srcset', $default_data.srcset );
+                    });
+
+                });
+            });
+        </script>
 
         <?php
     }

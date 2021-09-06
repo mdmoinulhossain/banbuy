@@ -211,7 +211,7 @@
 .product-item .actions .htcompare-btn.loading{
   padding: 0;
 }
-.product-item .actions a.htcompare-btn.loading::after,{
+.product-item .actions a.htcompare-btn.loading::after{
   right: 20px;
 }
 .product-item .product-inner .image-wrap .actions a.added_to_cart {
@@ -2055,6 +2055,9 @@
 
 [class*="woolentorducts-columns-"] ul.products{
   display: block !important;
+}
+[class*="woolentorducts-columns-"] ul.products li.product{
+  margin-left: 0 !important;
 }
 .woolentorducts-columns-6 ul.products li.product{
     width: calc(16% - 30px) !important;
@@ -3938,7 +3941,7 @@ h2.wl_filter_title {
 .wl_single-product-item .action li .woolentor-compare.compare::before {
     content: "\f0ec";
     position: absolute;
-    font-family: FontAwesome;
+    font-family: FontAwesome !important;
     font-size: 18px;
 }
 .wl_product-accordion .action .woocommerce.product.compare-button a:before {

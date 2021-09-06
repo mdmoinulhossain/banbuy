@@ -824,28 +824,31 @@ function woolentor_add_to_wishlist_button( $normalicon = '<i class="fa fa-heart-
         $output .= ob_get_clean();
         return $output;
 
-    }elseif( class_exists( 'YITH_WCWL' ) || !empty( get_option( 'yith_wcwl_wishlist_page_id' ) ) ){
-        global $yith_wcwl;
-        $url          = YITH_WCWL()->get_wishlist_url();
-        $product_type = $product->get_type();
-        $exists       = $yith_wcwl->is_product_in_wishlist( $product->get_id() );
-        $classes      = 'class="add_to_wishlist"';
-        $add          = get_option( 'yith_wcwl_add_to_wishlist_text' );
-        $browse       = get_option( 'yith_wcwl_browse_wishlist_text' );
-        $added        = get_option( 'yith_wcwl_product_added_text' );
+    }elseif( class_exists( 'YITH_WCWL' ) ){
 
-        $output  .= '<div class="'.( $tooltip == 'yes' ? '' : 'tooltip_no' ).' wishlist button-default yith-wcwl-add-to-wishlist add-to-wishlist-' . esc_attr( $product->get_id() ) . '">';
-            $output .= '<div class="yith-wcwl-add-button';
-                $output .= $exists ? ' hide" style="display:none;"' : ' show"';
-                $output .= '><a href="' . esc_url( htmlspecialchars( YITH_WCWL()->get_wishlist_url() ) ) . '" data-product-id="' . esc_attr( $product->get_id() ) . '" data-product-type="' . esc_attr( $product_type ) . '" ' . $classes . ' >'.$normalicon.'<span class="ht-product-action-tooltip">'.esc_html( $add ).'</span></a>';
-                $output .= '<i class="fa fa-spinner fa-pulse ajax-loading" style="visibility:hidden"></i>';
+        if( !empty( get_option( 'yith_wcwl_wishlist_page_id' ) ) ){
+            global $yith_wcwl;
+            $url          = YITH_WCWL()->get_wishlist_url();
+            $product_type = $product->get_type();
+            $exists       = $yith_wcwl->is_product_in_wishlist( $product->get_id() );
+            $classes      = 'class="add_to_wishlist"';
+            $add          = get_option( 'yith_wcwl_add_to_wishlist_text' );
+            $browse       = get_option( 'yith_wcwl_browse_wishlist_text' );
+            $added        = get_option( 'yith_wcwl_product_added_text' );
+
+            $output  .= '<div class="'.( $tooltip == 'yes' ? '' : 'tooltip_no' ).' wishlist button-default yith-wcwl-add-to-wishlist add-to-wishlist-' . esc_attr( $product->get_id() ) . '">';
+                $output .= '<div class="yith-wcwl-add-button';
+                    $output .= $exists ? ' hide" style="display:none;"' : ' show"';
+                    $output .= '><a href="' . esc_url( htmlspecialchars( YITH_WCWL()->get_wishlist_url() ) ) . '" data-product-id="' . esc_attr( $product->get_id() ) . '" data-product-type="' . esc_attr( $product_type ) . '" ' . $classes . ' >'.$normalicon.'<span class="ht-product-action-tooltip">'.esc_html( $add ).'</span></a>';
+                    $output .= '<i class="fa fa-spinner fa-pulse ajax-loading" style="visibility:hidden"></i>';
+                $output .= '</div>';
+
+                $output .= '<div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;"><a class="" href="' . esc_url( $url ) . '">'.$addedicon.'<span class="ht-product-action-tooltip">'.esc_html( $browse ).'</span></a></div>';
+                $output .= '<div class="yith-wcwl-wishlistexistsbrowse ' . ( $exists ? 'show' : 'hide' ) . '" style="display:' . ( $exists ? 'block' : 'none' ) . '"><a href="' . esc_url( $url ) . '" class="">'.$addedicon.'<span class="ht-product-action-tooltip">'.esc_html( $added ).'</span></a></div>';
             $output .= '</div>';
 
-            $output .= '<div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;"><a class="" href="' . esc_url( $url ) . '">'.$addedicon.'<span class="ht-product-action-tooltip">'.esc_html( $browse ).'</span></a></div>';
-            $output .= '<div class="yith-wcwl-wishlistexistsbrowse ' . ( $exists ? 'show' : 'hide' ) . '" style="display:' . ( $exists ? 'block' : 'none' ) . '"><a href="' . esc_url( $url ) . '" class="">'.$addedicon.'<span class="ht-product-action-tooltip">'.esc_html( $added ).'</span></a></div>';
-        $output .= '</div>';
-
-        return $output;
+            return $output;
+        }
 
     }else{
         return 0;

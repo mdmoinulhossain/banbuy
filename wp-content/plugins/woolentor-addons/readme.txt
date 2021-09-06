@@ -3,7 +3,7 @@ Contributors: hasthemes, htplugins, devitemsllc, tarekht
 Tags: Elementor, WooCommerce, WooCommerce Elementor, WooCommerce Builder, WooCommerce Product
 Requires at least: 4.7
 Tested up to: 5.8
-Stable tag: 1.9.5
+Stable tag: 1.9.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -321,6 +321,11 @@ Feel free to [Contact us](https://hasthemes.com/contact-us/)
 Elementor Pro is not required. But you can use wooLentor with Elementor free & Pro.
 
 == Changelog ==
+
+= Version: 1.9.6 - Date: 2021-08-30 =
+* Added FAQ Block, Product Curvy Block.
+* Solved Video gallery addon variation image change issue.
+* Solved product column space issue.
 
 = Version: 1.9.5 - Date: 2021-08-09 =
 * Solved Product column issue for the Astra Theme

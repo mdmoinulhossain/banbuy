@@ -35,7 +35,7 @@ class WL_Just_Table_Element extends Widget_Base {
         return ['table','product table','justtable'];
     }
 
-    protected function _register_controls() {
+    protected function register_controls() {
 
         // Content
         $this->start_controls_section(

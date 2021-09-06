@@ -35,7 +35,7 @@ class Woolentor_Elementor_Widget_Add_Banner extends Widget_Base {
         return ['banner','image banner','adds','adds banner'];
     }
 
-    protected function _register_controls() {
+    protected function register_controls() {
 
         $this->start_controls_section(
             'banner-conent',

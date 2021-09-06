@@ -432,12 +432,11 @@ p.demo_store,
 
 				td {
 					padding-left: 0;
-					display: inline;								
 				}
 
 				div.quantity {
 					float: none;
-					margin: 0;					
+					margin: 0;
 				}
 
 				small.stock {
@@ -456,7 +455,6 @@ p.demo_store,
 					border: 0;
 					vertical-align: top;
 					line-height: 2em;
-					display: inline;									
 				}
 
 				label {
@@ -504,7 +502,6 @@ p.demo_store,
 					vertical-align: top;
 					padding-bottom: 0.5em;
 					border: 0;
-					display: inline;
 				}
 
 				td:first-child {
@@ -1904,7 +1901,6 @@ p.demo_store,
 		th,
 		td {
 			vertical-align: middle;
-			display: inline;
 		}
 
 		td.actions .coupon .input-text {
@@ -1970,7 +1966,6 @@ p.demo_store,
 					th,
 					td {
 						border-top: 0;
-						display: inline;
 					}
 				}
 
@@ -1984,7 +1979,6 @@ p.demo_store,
 					border-left: 0;
 					border-right: 0;
 					line-height: 1.5em;
-					display: inline;
 				}
 
 				small {
@@ -2003,7 +1997,6 @@ p.demo_store,
 			tr td,
 			tr th {
 				border-top: 1px solid $secondary;
-				display: inline;
 			}
 
 			.woocommerce-shipping-destination {

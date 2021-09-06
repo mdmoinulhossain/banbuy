@@ -31,7 +31,7 @@ class WL_Product_Short_Description_Element extends Widget_Base {
         return ['short description','description','product short description'];
     }
 
-    protected function _register_controls() {
+    protected function register_controls() {
 
 
         // Style

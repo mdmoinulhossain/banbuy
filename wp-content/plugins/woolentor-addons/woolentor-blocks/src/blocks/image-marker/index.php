@@ -45,9 +45,8 @@ class WooLentorBlocks_Image_Marker{
 		register_block_type(
 			$metadata['name'],
 			array(
-				'attributes'  => $metadata['attributes'],
-				'render_callback' => [ $this, 'render_content' ],
-				'editor_style'    => 'woolentor-widgets',
+				'attributes'  	  => $metadata['attributes'],
+				'render_callback' => [ $this, 'render_content' ]
 			)
 		);
 
@@ -55,7 +54,7 @@ class WooLentorBlocks_Image_Marker{
 
 	public function render_content( $settings, $content ){
 
-		$uniqClass = 'woolentor-'.$settings['blockUniqId'];
+		$uniqClass = 'woolentorblock-'.$settings['blockUniqId'];
 		$areaClasses = array( 'woolentor-marker-area' );
 		$classes = array( $uniqClass, 'wlb-marker-wrapper' );
 
@@ -66,55 +65,8 @@ class WooLentorBlocks_Image_Marker{
 
 		$background_image = woolentorBlocks_Background_Control( $settings, 'bgProperty' );
 
-		/** Custom Styles */
-		$markerColor = woolentorBlocks_generate_css( $settings, 'markerColor', 'color' );
-		$markerBGColor = woolentorBlocks_generate_css( $settings, 'markerBGColor', 'background-color' );
-		$markerBorderColor = woolentorBlocks_generate_css( $settings, 'markerBorderColor', 'border-color' );
-		$markerBorderRadius = woolentorBlocks_Dimention_Control( $settings, 'markerBorderRadius', 'border-radius' );
-		$markerPadding = woolentorBlocks_Dimention_Control( $settings, 'markerPadding', 'padding' );
-
-		$markerContentBGColor = woolentorBlocks_generate_css( $settings, 'markerContentBGColor', 'background-color' );
-		$markerContentBorderRadius = woolentorBlocks_Dimention_Control( $settings, 'markerContentBorderRadius', 'border-radius' );
-		$markerContentPadding = woolentorBlocks_Dimention_Control( $settings, 'markerContentPadding', 'padding' );
-
-		$markerTitleColor = woolentorBlocks_generate_css( $settings, 'markerTitleColor', 'color' );
-		$markerTitleSize = woolentorBlocks_generate_css( $settings, 'markerTitleSize', 'font-size' );
-		$markerTitleMargin = woolentorBlocks_Dimention_Control( $settings, 'markerTitleMargin', 'margin' );
-
-		$markerDescriptionColor = woolentorBlocks_generate_css( $settings, 'markerDescriptionColor', 'color' );
-		$markerDescriptionSize = woolentorBlocks_generate_css( $settings, 'markerDescriptionSize', 'font-size' );
-		$markerDescriptionMargin = woolentorBlocks_Dimention_Control( $settings, 'markerDescriptionMargin', 'margin' );
-
-		$all_styles = "
-			.{$uniqClass} .wlb_image_pointer::before{
-				{$markerColor}
-			}
-			.{$uniqClass} .wlb_image_pointer{
-				{$markerBGColor}
-				{$markerBorderColor}
-				{$markerBorderRadius}
-				{$markerPadding}
-			}
-			.{$uniqClass} .wlb_image_pointer .wlb_pointer_box{
-				{$markerContentBGColor}
-				{$markerContentBorderRadius}
-				{$markerContentPadding}
-			}
-			.{$uniqClass} .wlb_image_pointer .wlb_pointer_box h4{
-				{$markerTitleColor}
-				{$markerTitleSize}
-				{$markerTitleMargin}
-			}
-			.{$uniqClass} .wlb_image_pointer .wlb_pointer_box p{
-				{$markerDescriptionColor}
-				{$markerDescriptionSize}
-				{$markerDescriptionMargin}
-			}
-		";
-
 		ob_start();
 		?>
-			<style><?php echo $all_styles; ?></style>
 			<div class="<?php echo implode(' ', $areaClasses ); ?>">
 				<div class="<?php echo implode(' ', $classes ); ?>" style="<?php echo $background_image; ?> position:relative;">
 

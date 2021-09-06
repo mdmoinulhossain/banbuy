@@ -33,7 +33,7 @@ class WL_Testimonial_Element extends Widget_Base {
         return ['woolentor','review','testimonial','product review','customer review','client say'];
     }
 
-    protected function _register_controls() {
+    protected function register_controls() {
 
         $this->start_controls_section(
             'testimonial_content',

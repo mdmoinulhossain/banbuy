@@ -33,7 +33,7 @@ class WL_Product_Horizontal_Filter_Element extends Widget_Base {
         return ['woolentor','shop','filter','product filter','horizontal'];
     }
 
-    protected function _register_controls() {
+    protected function register_controls() {
 
         $filter_by = [
             'price_by'     => esc_html__( 'Price', 'woolentor' ),

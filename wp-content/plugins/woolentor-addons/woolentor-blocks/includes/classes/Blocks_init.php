@@ -47,5 +47,62 @@ class Blocks_init {
         }
     }
 
+    /**
+     * Block List
+     */
+    public static function block_list(){
+
+        $blockList = [
+            array(
+                'label'  => 'Brand Logo',
+                'name'   => 'woolentor/brand-logo',
+                'active' => true,
+            ),
+            array(
+                'label'  => 'Category Grid',
+                'name'   => 'woolentor/category-grid',
+                'active' => true,
+            ),
+            array(
+                'label'  => 'Image Marker',
+                'name'   => 'woolentor/image-marker',
+                'active' => true,
+            ),
+            array(
+                'label'  => 'Special Day Offer',
+                'name'   => 'woolentor/special-day-offer',
+                'active' => true,
+            ),
+            array(
+                'label'  => 'Store Feature',
+                'name'   => 'woolentor/store-feature',
+                'active' => true,
+            ),
+            array(
+                'label'  => 'Product tab',
+                'name'   => 'woolentor/product-tab',
+                'active' => true,
+            ),
+            array(
+                'label'  => 'Promo Banner',
+                'name'   => 'woolentor/promo-banner',
+                'active' => true,
+            ),
+            array(
+                'label'  => 'FAQ',
+                'name'   => 'woolentor/faq',
+                'active' => true,
+            ),
+            array(
+                'label'  => 'Product Curvy',
+                'name'   => 'woolentor/product-curvy',
+                'active' => true,
+            )
+            
+        ];
+        return $blockList;
+        
+    }
+
 
 }

@@ -45,11 +45,9 @@ class WooLentorBlocks_Category_Grid{
 		register_block_type(
 			$metadata['name'],
 			array(
-				'attributes'  => $metadata['attributes'],
+				'attributes'      => $metadata['attributes'],
 				'render_callback' => [ $this, 'render_content' ],
-				'editor_style'    => 'woolentor-category-grid',
-				'style'			  => 'woolentor-category-grid',
-                'script'          => 'slick',
+                'script'          => 'slick'
 			)
 		);
 
@@ -57,12 +55,12 @@ class WooLentorBlocks_Category_Grid{
 
 	public function render_content( $settings, $content ){
 		
-		$uniqClass   = 'woolentor-'.$settings['blockUniqId'];
+		$uniqClass   = 'woolentorblock-'.$settings['blockUniqId'];
         $areaClasses = array( $uniqClass, );
-		$rowClasses     = array( 'wl-row' );
+		$rowClasses  = array( 'woolentor-row' );
 
 		!empty( $settings['className'] ) ? $areaClasses[] = $settings['className'] : '';
-        !empty( $settings['columns'] ) ? $areaClasses[] = 'wl-columns-'.$settings['columns'] : 'wl-columns-6';
+        !empty( $settings['columns'] ) ? $areaClasses[] = 'woolentor-columns-'.$settings['columns'] : 'woolentor-columns-6';
         !empty( $settings['align'] ) ? $areaClasses[] = 'align'.$settings['align'] : '';
 
         $settings['noGutter'] === true ? $rowClasses[] = 'wlno-gutters' : '';
@@ -73,9 +71,9 @@ class WooLentorBlocks_Category_Grid{
         $column         = $settings['columns'];
         $layout         = $settings['style'];
 
-        $collumval = 'wl-col-1';
+        $collumval = 'woolentor-col-1';
         if( $column !='' ){
-            $collumval = 'wl-col-'.$column;
+            $collumval = 'woolentor-col-'.$column;
         }
 
         $catargs = array(
@@ -145,64 +143,8 @@ class WooLentorBlocks_Category_Grid{
 
         $counter = $bgc = 0;
 
-        /** Custom Styles */
-        $itemMarginBottom = ( $settings['itemSpace'] + $settings['itemSpace'] );
-
-        // Area
-        $areaPadding = woolentorBlocks_Dimention_Control( $settings, 'areaPadding', 'padding' );
-        $areaBackground = woolentorBlocks_generate_css( $settings, 'areaBackgroundColor', 'background-color' );
-
-        $imageBoxColor = woolentorBlocks_generate_css( $settings, 'imageBoxColor', 'border-color' );
-        $imageMargin = woolentorBlocks_Dimention_Control( $settings, 'imageMargin', 'margin' );
-        $imageBorderRadius = woolentorBlocks_Dimention_Control( $settings, 'imageBorderRadius', 'border-radius' );
-
-        $titleColor = woolentorBlocks_generate_css( $settings, 'titleColor', 'color' );
-        $titleHoverColor = woolentorBlocks_generate_css( $settings, 'titleHoverColor', 'color' );
-        $titleMargin = woolentorBlocks_Dimention_Control( $settings, 'titleMargin', 'margin' );
-
-        $countColor = woolentorBlocks_generate_css( $settings, 'countColor', 'color' );
-        $countBeforeColor = woolentorBlocks_generate_css( $settings, 'countBeforeColor', 'background-color' );
-
-
-		$all_styles = "
-            .{$uniqClass} .wl-row:not(.wlno-gutters) > [class*='col-']{
-                padding: 0  {$settings['itemSpace']}px;
-            }
-            .{$uniqClass} .wl-row:not(.wlno-gutters) > [class*='col-'].woolentor_margin_top{
-                margin-top: {$itemMarginBottom}px;
-            }
-
-            .{$uniqClass} [class*='ht-category-wrap']{
-                {$areaPadding}
-                {$areaBackground}
-            }
-            .{$uniqClass} .ht-category-wrap .ht-category-image a.ht-category-border::before,.{$uniqClass} .ht-category-wrap-2:hover::before,.{$uniqClass} .ht-category-wrap .ht-category-image a.ht-category-border-2::before{
-                {$imageBoxColor}
-            }
-            .{$uniqClass} [class*='ht-category-wrap'] [class*='ht-category-image']{
-                {$imageMargin}
-            }
-            .{$uniqClass} .ht-category-wrap .ht-category-image, {$uniqClass} .ht-category-wrap .ht-category-image a.ht-category-border::before,{$uniqClass} [class*='ht-category-wrap'] [class*='ht-category-image-']{
-                {$imageBorderRadius}
-            }
-            .{$uniqClass} [class*='ht-category-wrap'] [class*='ht-category-content'] h3 a{
-                {$titleColor}
-                {$titleMargin}
-            }
-            .{$uniqClass} [class*='ht-category-wrap'] [class*='ht-category-content'] h3 a:hover{
-                {$titleHoverColor}
-            }
-            .{$uniqClass} .ht-category-wrap [class*='ht-category-content'] span{
-                {$countColor}
-            }
-            .{$uniqClass} .ht-category-wrap [class*='ht-category-content'] span::before{
-                {$countBeforeColor}
-            }
-        ";
-
 		ob_start();
 		?>
-			<style><?php echo $all_styles; ?></style>
             <div class="<?php echo implode(' ', $areaClasses ); ?>">
                 <div class="<?php echo implode(' ', $rowClasses ); ?>" <?php echo $sliderOptions; ?> <?php echo esc_attr( $direction ); ?>>
                     <?php

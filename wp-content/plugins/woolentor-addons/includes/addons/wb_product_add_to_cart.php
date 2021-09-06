@@ -32,7 +32,7 @@ class WL_Product_Add_To_Cart_Element extends Widget_Base {
         return ['add to cart','cart','button','buy now'];
     }
 
-    protected function _register_controls() {
+    protected function register_controls() {
 
         $this->start_controls_section(
             'add_to_cart_button_style',
