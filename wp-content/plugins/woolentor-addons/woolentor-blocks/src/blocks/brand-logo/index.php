@@ -60,7 +60,10 @@ class WooLentorBlocks_Brand_Logo{
 
 		!empty( $settings['align'] ) ? $areaClasses[] = 'align'.$settings['align'] : '';
 
-        !empty( $settings['columns'] ) ? $classes[] = 'woolentor-columns-'.$settings['columns'] : 'woolentor-columns-6';
+		!empty( $settings['columns']['desktop'] ) ? $classes[] = 'woolentor-columns-'.$settings['columns']['desktop'] : '';
+		!empty( $settings['columns']['laptop'] ) ? $classes[] = 'woolentor-laptop-columns-'.$settings['columns']['laptop'] : '';
+		!empty( $settings['columns']['tablet'] ) ? $classes[] = 'woolentor-tablet-columns-'.$settings['columns']['tablet'] : '';
+		!empty( $settings['columns']['mobile'] ) ? $classes[] = 'woolentor-mobile-columns-'.$settings['columns']['mobile'] : '';
 
 		$default_img = '<img src="'.WOOLENTOR_BLOCK_URL.'/src/assets/images/brand.png'.'" alt="'.esc_html__('Brand Logo','woolentor').'">';
 		$brands = $settings['brandLogoList'];
@@ -72,8 +75,8 @@ class WooLentorBlocks_Brand_Logo{
 				<div class="<?php echo implode(' ', $classes ); ?>">
 					<?php
 						$collumval = 'woolentor-col-6';
-						if( !empty( $settings['columns'] ) ){
-							$collumval = 'woolentor-col-'.$settings['columns'];
+						if( !empty( $settings['columns']['desktop'] ) ){
+							$collumval = 'woolentor-col-'.$settings['columns']['desktop'];
 						}
 						
 						if( is_array( $brands ) ){

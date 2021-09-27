@@ -96,16 +96,19 @@ class WooLentor_Default_Data{
                 case 'wl-product-add-to-cart':
                     ob_start();
                     echo '<div class="product">';
-                    do_action( 'woocommerce_' . $product->get_type() . '_add_to_cart' );
+                        do_action( 'woocommerce_' . $product->get_type() . '_add_to_cart' );
                     echo '</div>';
                     return ob_get_clean();
                     break;
 
                 case 'wl-single-product-price':
                     ob_start();
-                    ?>
-                    <p class="<?php echo esc_attr( apply_filters( 'woocommerce_product_price_class', 'price' ) ); ?>"><?php echo $product->get_price_html(); ?></p>
-                    <?php
+
+                    if( !empty( $product->get_price_html() ) ){
+                        ?><p class="<?php echo esc_attr( apply_filters( 'woocommerce_product_price_class', 'price' ) ); ?>"><?php echo $product->get_price_html(); ?></p><?php
+                    }else{
+                        echo '<p>'.esc_html__('Price does not set this product.','woolentor').'</p>';
+                    }
                     return ob_get_clean();
                     break;
 
@@ -113,7 +116,7 @@ class WooLentor_Default_Data{
                     ob_start();
                     $short_description = get_the_excerpt( self::$product_id );
                     $short_description = apply_filters( 'woocommerce_short_description', $short_description );
-                    if ( empty( $short_description ) ) { return; }
+                    if ( empty( $short_description ) ) { echo '<p>'.esc_html__('Short description dose not set this product.','woolentor').'</p>'; return; }
                     ?>
                         <div class="woocommerce-product-details__short-description"><?php echo wp_kses_post( $short_description ); ?></div>
                     <?php
@@ -123,7 +126,7 @@ class WooLentor_Default_Data{
                 case 'wl-single-product-description':
                     ob_start();
                     $description = get_post_field( 'post_content', self::$product_id );
-                    if ( empty( $description ) ) { return; }
+                    if ( empty( $description ) ) { echo '<p>'.esc_html__('Description dose not set this product.','woolentor').'</p>'; return; }
                     return $description .= ob_get_clean();
                     break;
 
@@ -248,9 +251,12 @@ class WooLentor_Default_Data{
                 case 'wl-single-product-stock':
                     ob_start();
                     $availability = $product->get_availability();
-                    ?>
-                        <div class="product"><p class="stock <?php echo esc_attr( $availability['class'] ); ?>"><?php echo wp_kses_post( $availability['availability'] ); ?></p></div>
-                    <?php
+
+                    if( !empty( $availability['availability'] ) ){
+                        echo '<div class="product"><p class="stock '.esc_attr( $availability['class'] ).'">'.wp_kses_post( $availability['availability'] ).'</p></div>';
+                    }else{
+                        echo '<p>'.esc_html__('Stock availability does not exist this product.','woolentor').'</p>';
+                    }
                     return ob_get_clean();
                     break;
 
@@ -271,7 +277,11 @@ class WooLentor_Default_Data{
                         $order = $settings['order'];
                     }
 
-                    woocommerce_upsell_display( $product_per_page, $columns, $orderby, $order );
+                    if( $product->get_upsell_ids() ){
+                        woocommerce_upsell_display( $product_per_page, $columns, $orderby, $order );
+                    }else{
+                        echo '<p>'.esc_html__('No upsell products are available.','woolentor').'</p>';
+                    }
 
                     return ob_get_clean();
                     break;
@@ -297,7 +307,11 @@ class WooLentor_Default_Data{
 
                     $args['related_products'] = wc_products_array_orderby( $args['related_products'], $args['orderby'], $args['order'] );
 
-                    wc_get_template( 'single-product/related.php', $args );
+                    if( wc_get_related_products( $product->get_id(), $args['posts_per_page'], $product->get_upsell_ids() ) ){
+                        wc_get_template( 'single-product/related.php', $args );
+                    }else{
+                        echo '<p>'.esc_html__('No related products are available.','woolentor').'</p>';
+                    }
 
                     return ob_get_clean();
                     break;

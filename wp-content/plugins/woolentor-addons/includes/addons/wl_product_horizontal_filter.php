@@ -736,15 +736,15 @@ class WL_Product_Horizontal_Filter_Element extends Widget_Base {
                     'options' => [
                         'flex-start' => [
                             'title' => esc_html__( 'Left', 'woolentor' ),
-                            'icon' => 'fa fa-align-left',
+                            'icon' => 'eicon-text-align-left',
                         ],
                         'center' => [
                             'title' => esc_html__( 'Center', 'woolentor' ),
-                            'icon' => 'fa fa-align-center',
+                            'icon' => 'eicon-text-align-center',
                         ],
                         'flex-end' => [
                             'title' => esc_html__( 'Right', 'woolentor' ),
-                            'icon' => 'fa fa-align-right',
+                            'icon' => 'eicon-text-align-right',
                         ],
                     ],
                     'selectors' => [

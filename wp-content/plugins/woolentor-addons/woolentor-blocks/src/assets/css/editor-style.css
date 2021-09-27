@@ -257,3 +257,28 @@ button.components-button.woolentor-elements-tab-menu-item.tab-menu-active{
 .woolentor-component-taxonomy-fileds::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
+
+/* Responsive Buttons */
+.components-panel__row.woolentor-device-row {
+    justify-content: start;
+}
+.components-panel__row.woolentor-device-row label {
+    margin-right: 5px;
+}
+.woolentor-device-button button.components-button {
+    padding: 0 !important;
+    min-width: inherit;
+    height: inherit;
+    box-shadow: none !important;
+    border: none !important;
+    color: #222 !important;
+    background-color: transparent !important;
+}
+.woolentor-device-button button.components-button span.dashicon{
+    font-size: 13px;
+    width: inherit;
+    height: inherit;
+}
+.woolentor-device-button button.components-button.is-primary{
+    color: #007cba !important;
+}

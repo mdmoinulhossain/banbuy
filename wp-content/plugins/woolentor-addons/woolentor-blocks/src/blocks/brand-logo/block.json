@@ -32,9 +32,11 @@
                 }
             ]
         },
-        "columns":{
-            "type": "number",
-            "default": 6
+        "columns": {
+            "type": "object",
+            "default": {
+                "desktop": 6
+            }
         },
         "noGutter":{
             "type": "boolean",

@@ -148,7 +148,7 @@
                 let {
                     thumbnail,
                     id,
-                    demoUrl,
+                    url,
                     shareId,
                     title
                 } = htwptPrintData[i],
@@ -262,7 +262,7 @@
                 let {
                     thumbnail,
                     id,
-                    demoUrl,
+                    url,
                     shareId,
                     title,
                     isPro,
@@ -285,7 +285,7 @@
                                         <span class="img-loader"></span>
                                     </a>
                                     <div class="htwpt-actions">
-                                        <a href="${demoUrl}" target="_blank">${HTTM.buttontxt.preview}</a>
+                                        <a href="${url}" target="_blank">${HTTM.buttontxt.preview}</a>
                                         ${$impbutton}
                                     </div>
                                 </div>

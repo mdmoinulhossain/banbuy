@@ -225,6 +225,51 @@ class HTMega_Elementor_Widget_Working_Process extends Widget_Base {
                 ]
             );
 
+            $this->add_control(
+                'vertical_line_color',
+                [
+                    'label' => __( 'Vertical Line Color', 'htmega-addons' ),
+                    'type' => Controls_Manager::COLOR,
+                    'default' => '#e51515',
+                    'selectors' => [
+                        '{{WRAPPER}} .htmega-process-style-3::before' => 'background: {{VALUE}}',
+                    ],
+                    'condition' => array(
+                        'process_style' => '3' 
+                    )
+                ]
+            );
+
+            $this->add_control(
+                'arrow_left_color',
+                [
+                    'label' => __( 'Arrow Left Color', 'htmega-addons' ),
+                    'type' => Controls_Manager::COLOR,
+                    'default' => '#e51515',
+                    'selectors' => [
+                        '{{WRAPPER}} .htmega-process-style-3 .htmega-single-process:not(.process-reverse) .icon::before' => 'border-right-color: {{VALUE}}',
+                    ],
+                    'condition' => array(
+                        'process_style' => '3' 
+                    )
+                ]
+            );
+
+            $this->add_control(
+                'arrow_right_color',
+                [
+                    'label' => __( 'Arrow Right Color', 'htmega-addons' ),
+                    'type' => Controls_Manager::COLOR,
+                    'default' => '#e51515',
+                    'selectors' => [
+                        '{{WRAPPER}} .htmega-process-style-3 .htmega-single-process.process-reverse .icon::before' => 'border-left-color: {{VALUE}}',
+                    ],
+                    'condition' => array(
+                        'process_style' => '3' 
+                    )
+                ]
+            );
+
         $this->end_controls_section();
 
         // Process Item tab section
@@ -235,7 +280,7 @@ class HTMega_Elementor_Widget_Working_Process extends Widget_Base {
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
-            
+
             $this->add_group_control(
                 Group_Control_Background::get_type(),
                 [

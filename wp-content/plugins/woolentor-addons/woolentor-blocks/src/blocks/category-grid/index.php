@@ -60,7 +60,11 @@ class WooLentorBlocks_Category_Grid{
 		$rowClasses  = array( 'woolentor-row' );
 
 		!empty( $settings['className'] ) ? $areaClasses[] = $settings['className'] : '';
-        !empty( $settings['columns'] ) ? $areaClasses[] = 'woolentor-columns-'.$settings['columns'] : 'woolentor-columns-6';
+        !empty( $settings['columns']['desktop'] ) ? $areaClasses[] = 'woolentor-columns-'.$settings['columns']['desktop'] : '';
+		!empty( $settings['columns']['laptop'] ) ? $areaClasses[] = 'woolentor-laptop-columns-'.$settings['columns']['laptop'] : '';
+		!empty( $settings['columns']['tablet'] ) ? $areaClasses[] = 'woolentor-tablet-columns-'.$settings['columns']['tablet'] : '';
+		!empty( $settings['columns']['mobile'] ) ? $areaClasses[] = 'woolentor-mobile-columns-'.$settings['columns']['mobile'] : '';
+
         !empty( $settings['align'] ) ? $areaClasses[] = 'align'.$settings['align'] : '';
 
         $settings['noGutter'] === true ? $rowClasses[] = 'wlno-gutters' : '';
@@ -68,8 +72,8 @@ class WooLentorBlocks_Category_Grid{
         $display_type = $settings['displayType'];
         $order = ! empty( $settings['order'] ) ? $settings['order'] : '';
 
-        $column         = $settings['columns'];
-        $layout         = $settings['style'];
+        $column  = $settings['columns']['desktop'];
+        $layout  = $settings['style'];
 
         $collumval = 'woolentor-col-1';
         if( $column !='' ){
@@ -103,7 +107,7 @@ class WooLentorBlocks_Category_Grid{
 
         $prod_categories = woolentorBlocks_taxnomy_data( $catargs['slug'], $catargs['number'], $catargs['order'] );
 
-        $image_size = 'full';
+        $image_size = $settings['imageSize'] ? $settings['imageSize'] : 'full';
 
         // Slider Options
         $slider_settings = array();
@@ -153,7 +157,7 @@ class WooLentorBlocks_Category_Grid{
                             $bgc++;
                             $counter++;
 
-                            $cat_thumb_id = $prod_cat['image']['id'];
+                            $cat_thumb_id = $prod_cat['thumbnail_id'];
                             $thumbnails = $cat_thumb_id ? wp_get_attachment_image( $cat_thumb_id, $image_size ) : '';
 
                             ?>

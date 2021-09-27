@@ -355,6 +355,7 @@ class HTMega_Elementor_Widget_Testimonial extends Widget_Base {
                     'default' => 1,
                     'condition' => [
                         'slider_on' => 'yes',
+                        'slcentermode!' => 'yes',
                     ]
                 ]
             );
@@ -397,6 +398,7 @@ class HTMega_Elementor_Widget_Testimonial extends Widget_Base {
                     'default' => 1,
                     'condition' => [
                         'slider_on' => 'yes',
+                        'slcentermode!' => 'yes',
                     ]
                 ]
             );
@@ -452,6 +454,7 @@ class HTMega_Elementor_Widget_Testimonial extends Widget_Base {
                     'default' => 1,
                     'condition' => [
                         'slider_on' => 'yes',
+                        'slcentermode!' => 'yes',
                     ]
                 ]
             );

@@ -921,6 +921,7 @@ class WL_Product_Filter_Element extends Widget_Base {
                                     }
                                 echo '</ul>';
                             }
+                            
                         }else{
                             $terms = get_terms( $filter_type );
                             if ( !empty( $terms ) ){

@@ -60,7 +60,10 @@ class WooLentorBlocks_Product_Curvy{
 		!empty( $settings['align'] ) ? $areaClasses[] = 'align'.$settings['align'] : '';
 		!empty( $settings['className'] ) ? $areaClasses[] = $settings['className'] : '';
 
-		!empty( $settings['columns'] ) ? $areaClasses[] = 'woolentor-columns-'.$settings['columns'] : '';
+		!empty( $settings['columns']['desktop'] ) ? $areaClasses[] = 'woolentor-columns-'.$settings['columns']['desktop'] : '';
+		!empty( $settings['columns']['laptop'] ) ? $areaClasses[] = 'woolentor-laptop-columns-'.$settings['columns']['laptop'] : '';
+		!empty( $settings['columns']['tablet'] ) ? $areaClasses[] = 'woolentor-tablet-columns-'.$settings['columns']['tablet'] : '';
+		!empty( $settings['columns']['mobile'] ) ? $areaClasses[] = 'woolentor-mobile-columns-'.$settings['columns']['mobile'] : '';
 
 		$queryArgs = [
 			'perPage'	=> $settings['perPage'],
@@ -87,7 +90,6 @@ class WooLentorBlocks_Product_Curvy{
 			}
 		}
 
-
 		ob_start();
 		?>
 			<div class="<?php echo implode(' ', $areaClasses ); ?>">
@@ -107,12 +109,12 @@ class WooLentorBlocks_Product_Curvy{
 								$description = wp_trim_words ( get_the_content(), $settings['contentLimit'], '' );
 
 								?>
-									<div class="woolentor-col-<?php echo $settings['columns']; ?>">
+									<div class="woolentor-col-<?php echo $settings['columns']['desktop']; ?>">
 										<div class="wl_single-product-item <?php echo $content_style; ?>">
 
 											<a href="<?php the_permalink(); ?>" class="product-thumbnail">
 												<div class="images">
-													<?php woocommerce_template_loop_product_thumbnail(); ?>
+													<?php echo $product->get_image( 'full' ); //woocommerce_template_loop_product_thumbnail(); ?>
 												</div>
 											</a>
 

@@ -33,6 +33,10 @@
             "type": "boolean",
             "default": true
         },
+        "imageSize":{
+            "type": "string",
+            "default": "full"
+        },
         "sliderOn":{
             "type": "boolean",
             "default": false
@@ -97,9 +101,11 @@
             "type": "number",
             "default": 480
         },
-        "columns":{
-            "type": "number",
-            "default": 3
+        "columns": {
+            "type": "object",
+            "default": {
+                "desktop": 3
+            }
         },
         "noGutter":{
             "type": "boolean",

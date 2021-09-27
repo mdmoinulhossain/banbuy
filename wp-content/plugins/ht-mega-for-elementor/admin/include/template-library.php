@@ -7,8 +7,8 @@ class HTMega_Template_Library{
     const TRANSIENT_KEY = 'htmega_template_info';
     public static $buylink = null;
 
-    public static $endpoint     = 'https://htmega.hasthemes.com/library/wp-json/htmega/v1/templates';
-    public static $templateapi  = 'https://htmega.hasthemes.com/library/wp-json/htmega/v1/templates/%s';
+    public static $endpoint     = 'https://wphtmega.com/library/wp-json/htmega/v1/templates';
+    public static $templateapi  = 'https://wphtmega.com/library/wp-json/htmega/v1/templates/%s';
 
     public static $api_args = [];
 

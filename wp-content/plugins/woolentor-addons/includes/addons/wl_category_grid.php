@@ -559,8 +559,8 @@ class WL_Category_Grid_Element extends Widget_Base {
                     'label' => __( 'Hover Color', 'woolentor' ),
                     'type' => Controls_Manager::COLOR,
                     'selectors' => [
-                        '{{WRAPPER}} .ht-category-wrap .ht-category-content h3 a:hover' => 'color: {{VALUE}}',
-                        '{{WRAPPER}} [class*="ht-category-wrap"] [class*="ht-category-content-"] h3 a:hover' => 'color: {{VALUE}}',
+                        '{{WRAPPER}} .ht-category-wrap .ht-category-content h3 a:hover' => 'color: {{VALUE}}; border-color: {{VALUE}}',
+                        '{{WRAPPER}} [class*="ht-category-wrap"] [class*="ht-category-content-"] h3 a:hover' => 'color: {{VALUE}}; border-color: {{VALUE}}',
                     ],
                 ]
             );

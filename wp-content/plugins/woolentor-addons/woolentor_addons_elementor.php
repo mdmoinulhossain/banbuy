@@ -3,7 +3,7 @@
  * Plugin Name: WooLentor - WooCommerce Elementor Addons + Builder
  * Description: The WooCommerce elements library for Elementor page builder plugin for WordPress.
  * Plugin URI:  https://woolentor.com/
- * Version:     1.9.6
+ * Version:     1.9.7
  * Author:      HasThemes
  * Author URI:  https://hasthemes.com/plugins/woolentor-pro/
  * License:     GPL-2.0+
@@ -11,13 +11,13 @@
  * Text Domain: woolentor
  * Domain Path: /languages
  * WC tested up to: 5.6.0
- * Elementor tested up to: 3.4.3
+ * Elementor tested up to: 3.4.4
  * Elementor Pro tested up to: 3.3.4
 */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-define( 'WOOLENTOR_VERSION', '1.9.6' );
+define( 'WOOLENTOR_VERSION', '1.9.7' );
 define( 'WOOLENTOR_ADDONS_PL_ROOT', __FILE__ );
 define( 'WOOLENTOR_ADDONS_PL_URL', plugins_url( '/', WOOLENTOR_ADDONS_PL_ROOT ) );
 define( 'WOOLENTOR_ADDONS_PL_PATH', plugin_dir_path( WOOLENTOR_ADDONS_PL_ROOT ) );

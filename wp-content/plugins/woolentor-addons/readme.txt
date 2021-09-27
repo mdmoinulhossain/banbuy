@@ -1,9 +1,9 @@
-﻿=== WooLentor - WooCommerce Elementor Addons + Builder ===
+=== WooLentor - WooCommerce Elementor Addons + Builder ===
 Contributors: hasthemes, htplugins, devitemsllc, tarekht
 Tags: Elementor, WooCommerce, WooCommerce Elementor, WooCommerce Builder, WooCommerce Product
 Requires at least: 4.7
 Tested up to: 5.8
-Stable tag: 1.9.6
+Stable tag: 1.9.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -321,6 +321,15 @@ Feel free to [Contact us](https://hasthemes.com/contact-us/)
 Elementor Pro is not required. But you can use wooLentor with Elementor free & Pro.
 
 == Changelog ==
+
+= Version: 1.9.7 - Date: 2021-09-15 =
+* Added responsive column option in some blocks.
+* Added image size option in category grid block.
+* Capability with polylang multi language plugin.
+* Solved product column issue.
+* Solved alignment icon showing issue.
+* Solved default data showing issue in elementor editor mode.
+* Improved category grid addon style option.
 
 = Version: 1.9.6 - Date: 2021-08-30 =
 * Added FAQ Block, Product Curvy Block.

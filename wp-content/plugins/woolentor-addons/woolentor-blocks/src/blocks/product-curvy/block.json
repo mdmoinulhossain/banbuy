@@ -42,9 +42,11 @@
         "layout":{
             "type": "string"
         },
-        "columns":{
-            "type": "number",
-            "default": 4
+        "columns": {
+            "type": "object",
+            "default": {
+                "desktop": 4
+            }
         },
         "noGutter":{
             "type": "boolean",

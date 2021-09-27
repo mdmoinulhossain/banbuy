@@ -195,9 +195,9 @@
   font-weight: 500;
   left: 15px;
   top: 15px;
-  line-height: 1;
-  min-height: inherit;
-  min-width: inherit;
+  line-height: 1 !important;
+  min-height: inherit !important;
+  min-width: inherit !important;
   padding: 5px 10px;
   position: absolute;
 }
@@ -2054,7 +2054,10 @@
 }
 
 [class*="woolentorducts-columns-"] ul.products{
-  display: block !important;
+  display: flex !important;
+  flex-flow: row wrap;
+  column-gap: 0;
+  justify-content: space-between;
 }
 [class*="woolentorducts-columns-"] ul.products li.product{
   margin-left: 0 !important;
@@ -2097,7 +2100,7 @@
 .woolentorducts-columns-3 ul.products li.product:nth-child(3n),
 .woolentorducts-columns-2 ul.products li.product:nth-child(2n),
 .woolentorducts-columns-1 ul.products li.product{
-    margin-right: 0;
+    margin-right: 0 !important;
 }
 
 .woocommerce #content div.product .woolentor-woo-template-builder div.images,.woocommerce div.product .woolentor-woo-template-builder div.images {

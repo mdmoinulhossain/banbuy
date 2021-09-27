@@ -1729,13 +1729,13 @@ svg.woolentor-banner-default{
 
 @media only screen and (max-width: 767px) {
     .wl_single-product-item .product-thumbnail {
-        height: 235px;
+        height: 100% !important;
     }
 }
 
 @media only screen and (max-width: 575px) {
     .wl_single-product-item .product-thumbnail {
-        height: 270px;
+        height: 100% !important;
     }
 }
 

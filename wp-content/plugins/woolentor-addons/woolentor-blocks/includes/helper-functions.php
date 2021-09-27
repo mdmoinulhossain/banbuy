@@ -168,17 +168,27 @@ function woolentorBlocks_taxnomy_data( $taxnomySlug = '', $number = 20, $order =
         foreach ( $term_data as $terms ) {
             $tempData = array();
             $thumbnail_id   = get_term_meta( $terms->term_id, 'thumbnail_id', true ) ? get_term_meta( $terms->term_id, 'thumbnail_id', true ) : ''; 
-            $image_src      = $thumbnail_id ? wp_get_attachment_url( $thumbnail_id ) : '';
             $tempData['link']   = get_term_link( $terms );
             $tempData['name']   = $terms->name;
             $tempData['slug']   = $terms->slug;
             $tempData['desc']   = $terms->description;
             $tempData['count']  = $terms->count;
-            $tempData['image']  = [
-                'src'            => $image_src,
-                'id'             => $thumbnail_id,
-                'placeholderImg' => wc_placeholder_img_src( 'woocommerce_single' )
-            ];
+            $tempData['thumbnail_id']  = $thumbnail_id ? $thumbnail_id : '';
+            $tempData['placeholderImg']  = wc_placeholder_img_src( 'woocommerce_single' );
+            
+            // Images
+            if( $thumbnail_id ){
+                $image_sizes    = woolentorBlocks_get_image_size();
+                $image_src      = array();
+                foreach ( $image_sizes as $key => $size ) {
+                    $image_src[$key] = [
+                        'src' => wp_get_attachment_image_src( $thumbnail_id, $key, false )[0],
+                        'html' => wp_get_attachment_image( $thumbnail_id, $key )
+                    ];
+                }
+                $tempData['image'] = $image_src;
+            }
+
             $data[] = $tempData;
         }
         

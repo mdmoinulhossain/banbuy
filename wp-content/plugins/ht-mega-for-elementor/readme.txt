@@ -3,7 +3,7 @@ Contributors: hasthemes, htplugins, devitemsllc, tarekht
 Tags: Elementor, Elementor Addons, Elementor Widgets, elementor page builder, Elementor Blocks
 Requires at least: 4.7
 Tested up to: 5.8
-Stable tag: 1.6.3
+Stable tag: 1.6.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,7 +12,7 @@ The HTMega is a elementor addons package for Elementor page builder plugin for W
 == Description ==
 HTMega is a absolute addons for elementor includes 80+ elements & 360 Blocks with unlimited variations. HT Mega brings limitless possibilities. Embellish your site with the elements of HT Mega.
 
-[Video Tutorial Playlist](https://www.youtube.com/watch?v=d7jAiAYusUg&list=PLk25BQFrj7wEEGUHn9x2zwOql990bZAo_) | [Plugin Live Demo](https://demo.hasthemes.com/ht-mega/index.html) | [Documentation](https://htmega.hasthemes.com/doc/)
+[Video Tutorial Playlist](https://www.youtube.com/watch?v=d7jAiAYusUg&list=PLk25BQFrj7wEEGUHn9x2zwOql990bZAo_) | [Plugin Live Demo](https://wphtmega.com) | [Documentation](https://wphtmega.com/docs/)
 
 = Advanced Features: =
 = Header/Footer Builder =
@@ -31,91 +31,91 @@ This feature allows creating menu or mega menu using the Elementor page builder.
 
 == Avaible Elements ==
 
-1. [Accordion - 9 Styles ](http://demo.wphash.com/htmega/element-accordion/)
-2. [Heading - 7 Styles ](http://demo.wphash.com/htmega/element-heading/)
-3. [Banner Box - 4 Styles ](http://demo.wphash.com/htmega/element-banner/)
-4. [Block Quote - 5 Styles ](http://demo.wphash.com/htmega/element-blockquote/)
-5. [Brand - 7 Styles ](http://demo.wphash.com/htmega/element-brand/)
-6. [Business Hours - 5 Styles ](http://demo.wphash.com/htmega/element-business-hours/)
-7. [Button - 5 Styles ](http://demo.wphash.com/htmega/element-button/)
-8. [Call To Action - 7 Styles ](http://demo.wphash.com/htmega/element-call-to-action/)
-9. [Contact Form - 7 Styles ](http://demo.wphash.com/htmega/element-contact-form/)
-10. [Countdown - 7 Styles ](http://demo.wphash.com/htmega/element-countdown/)
-11. [Counter Up - 6 Styles ](http://demo.wphash.com/htmega/element-counter/)
-12. [Custom Carosel - 7 Styles ](http://demo.wphash.com/htmega/element-custom-carousel/)
-13. [Dropcaps - 5 Styles ](http://demo.wphash.com/htmega/element-dropcaps/)
-14. [Double Button - 5 Styles ](http://demo.wphash.com/htmega/eelement-double-button/)
-15. [Faq - 5 Styles ](http://demo.wphash.com/htmega/element-faq/)
-16. [Flip box - 5 Styles ](http://demo.wphash.com/htmega/element-flipbox/)
-17. [Google Map - 5 Styles ](http://demo.wphash.com/htmega/element-google-map/)
-18. [Animated Heading - 7 Styles ](http://demo.wphash.com/htmega/element-animated-heading/)
-19. [Image Comparison - 5 Styles ](http://demo.wphash.com/htmega/element-image-comparison/)
-20. [Image Justify - 5 Styles ](http://demo.wphash.com/htmega/element-image-justify/)
-21. [Image Magnifire - 5 Styles ](http://demo.wphash.com/htmega/element-image-magnifier/)
-22. [Image Masonary - 5 Styles ](http://demo.wphash.com/htmega/element-image-masonry/)
-23. [Instagram - 5 Styles ](http://demo.wphash.com/htmega/element-instagram/)
-24. [Light Box - 4 Styles ](http://demo.wphash.com/htmega/element-light-box/)
-25. [Inline Menu - 10 Styles ](http://demo.wphash.com/htmega/element-inline-menu/)
-26. [User Login - 5 Styles ](http://demo.wphash.com/htmega/element-user-login/)
-27. [User Register - 5 Styles ](http://demo.wphash.com/htmega/element-user-register/)
-28. [Image Marker - 5 Styles ](http://demo.wphash.com/htmega/element-image-marker/)
-29. [Modals - 5 Styles ](http://demo.wphash.com/htmega/element-modal/)
-30. [Subscribe News Letter - 5 Styles ](http://demo.wphash.com/htmega/element-subscribe/)
-31. [News Ticker - 7 Styles ](http://demo.wphash.com/htmega/element-news-ticker/)
-32. [Notification - 4 Styles ](http://demo.wphash.com/htmega/element-notification/)
-33. [Offcanvas - 4 Styles ](http://demo.wphash.com/htmega/element-off-canvas/)
-34. [Panel Slider - 4 Styles ](http://demo.wphash.com/htmega/element-panel-slider/)
-35. [Popovers - 4 Styles ](http://demo.wphash.com/htmega/element-popover/)
-36. [Post carosel - 5 Styles ](http://demo.wphash.com/htmega/post-carosul/)
-37. [Post Grid - 5 Styles ](http://demo.wphash.com/htmega/element-post-grid/)
-38. [Post Grid Tab - 5 Styles ](http://demo.wphash.com/htmega/element-post-grid-tab/)
-39. [Post Slider - 5 Styles ](http://demo.wphash.com/htmega/element-post-slider/)
-40. [Pricing List View - 3 Styles ](http://demo.wphash.com/htmega/element-pricing-list-view/)
-41. [Pricing Table - 7 Styles ](http://demo.wphash.com/htmega/element-pricing-table/)
-42. [Progress Bar - 10 Styles ](http://demo.wphash.com/htmega/element-progress-bar/)
-43. [Scroll Image - 2 Styles ](http://demo.wphash.com/htmega/element-scroll-image/)
-44. [Scroll Navigation - 4 Styles ](http://demo.wphash.com/htmega/element-scroll-navigation/)
-45. [Search - 5 Styles ](http://demo.wphash.com/htmega/elementor-search/)
-46. [Services - 7 Styles ](http://demo.wphash.com/htmega/element-services/)
-47. [Single Post - 5 Styles ](http://demo.wphash.com/htmega/element-single-post/)
-48. [Social Share - 9 Styles ](http://demo.wphash.com/htmega/element-social-shere/)
-49. [Switcher Share - 9 Styles ](http://demo.wphash.com/htmega/element-switcher/)
-50. [Tab - 5 Styles ](http://demo.wphash.com/htmega/element-tab/)
-51. [Data Table - 3 Styles ](http://demo.wphash.com/htmega/element-data-table/)
-52. [Team Member - 8 Styles ](http://demo.wphash.com/htmega/element-team-member/)
-53. [Testimonial carosel - 5 Styles ](http://demo.wphash.com/htmega/element-testimonial/)
-54. [Testimonial Grid - 5 Styles ](http://demo.wphash.com/htmega/element-testimonial-grid/)
-55. [Thumbnails Gallery - 4 Styles ](http://demo.wphash.com/htmega/element-thumbnails-gallery/)
-56. [Toggle - 3 Styles ](http://demo.wphash.com/htmega/element-toggle/)
-57. [Tool Tip - 4 Styles ](http://demo.wphash.com/htmega/element-tooltip/)
-58. [Twitter Feed - 5 Styles ](http://demo.wphash.com/htmega/element-twitter-feed/)
-59. [Verticle Timeline - 3 Styles ](http://demo.wphash.com/htmega/element-vertical-timeline/)
-60. [Video Player - 4 Styles ](http://demo.wphash.com/htmega/elementor-video-player/)
-61. [Weather - 3 Styles ](http://demo.wphash.com/htmega/element-weather/)
-62. [Working Process - 4 Styles ](http://demo.wphash.com/htmega/element-working-process/)
-63. [404 Page Content - 4 Styles ](http://demo.wphash.com/htmega/element-page-not-found-content/)
-64. [BBPress](http://demo.wphash.com/htmega/element-bbpress/)
-65. [Booked Calender](http://demo.wphash.com/htmega/element-booked-calender/)
-66. [BuddyPress](http://demo.wphash.com/htmega/element-buddypress/)
-67. [Caldera Forms](http://demo.wphash.com/htmega/element-caldera-forms/)
-68. [Download monitor](http://demo.wphash.com/htmega/element-download-monitor/)
-69. [Easy digital downloads](http://demo.wphash.com/htmega/element-easy-digital-downloads/)
-70. [Event Countdown](http://demo.wphash.com/htmega/element-event-countdown/)
-71. [Gravity Forms](http://demo.wphash.com/htmega/element-gravity-forms/)
-72. [Instagram Feed](http://demo.wphash.com/htmega/element-instagram-feed/)
-73. [Instagram Feed](http://demo.wphash.com/htmega/element-instagram-feed/)
-74. [Job Manager](http://demo.wphash.com/htmega/element-job-manager/)
-75. [LayerSlider](http://demo.wphash.com/htmega/element-layer-slider/)
-76. [Ninja Form](http://demo.wphash.com/htmega/element-ninja-form/)
-77. [QU Form](http://demo.wphash.com/htmega/element-quform/)
-78. [TablePress](http://demo.wphash.com/htmega/element-tablepress/)
-79. [MailChimp for WP](http://demo.wphash.com/htmega/element-subscribe/)
-80. [WP Forms](http://demo.wphash.com/htmega/element-wp-forms/)
-81. [WooCommerce add to cart](http://demo.wphash.com/htmega/element-woocommerce-add-to-cart/)
-82. [WooCommerce Category](http://demo.wphash.com/htmega/element-woocommerce-category/)
-83. [WooCommerce Cart Page](http://demo.wphash.com/htmega/element-woocommerce-cart-page/)
-84. [WooCommerce Checkout Page](http://demo.wphash.com/htmega/element-checkout-page/)
-85. [Special Day Offer](http://demo.wphash.com/htmega/element-special-day-offer/)
+1. [Accordion - 9 Styles ](https://wphtmega.com/widget/element-accordion/)
+2. [Heading - 7 Styles ](https://wphtmega.com/widget/element-heading/)
+3. [Banner Box - 4 Styles ](https://wphtmega.com/widget/element-banner/)
+4. [Block Quote - 5 Styles ](https://wphtmega.com/widget/element-blockquote/)
+5. [Brand - 7 Styles ](https://wphtmega.com/widget/element-brand/)
+6. [Business Hours - 5 Styles ](https://wphtmega.com/widget/element-business-hours/)
+7. [Button - 5 Styles ](https://wphtmega.com/widget/element-button/)
+8. [Call To Action - 7 Styles ](https://wphtmega.com/widget/element-call-to-action/)
+9. [Contact Form - 7 Styles ](https://wphtmega.com/widget/element-contact-form/)
+10. [Countdown - 7 Styles ](https://wphtmega.com/widget/element-countdown/)
+11. [Counter Up - 6 Styles ](https://wphtmega.com/widget/element-counter/)
+12. [Custom Carosel - 7 Styles ](https://wphtmega.com/widget/element-custom-carousel/)
+13. [Dropcaps - 5 Styles ](https://wphtmega.com/widget/element-dropcaps/)
+14. [Double Button - 5 Styles ](https://wphtmega.com/widget/eelement-double-button/)
+15. [Faq - 5 Styles ](https://wphtmega.com/widget/element-faq/)
+16. [Flip box - 5 Styles ](https://wphtmega.com/widget/element-flipbox/)
+17. [Google Map - 5 Styles ](https://wphtmega.com/widget/element-google-map/)
+18. [Animated Heading - 7 Styles ](https://wphtmega.com/widget/element-animated-heading/)
+19. [Image Comparison - 5 Styles ](https://wphtmega.com/widget/element-image-comparison/)
+20. [Image Justify - 5 Styles ](https://wphtmega.com/widget/element-image-justify/)
+21. [Image Magnifire - 5 Styles ](https://wphtmega.com/widget/element-image-magnifier/)
+22. [Image Masonary - 5 Styles ](https://wphtmega.com/widget/element-image-masonry/)
+23. [Instagram - 5 Styles ](https://wphtmega.com/widget/element-instagram/)
+24. [Light Box - 4 Styles ](https://wphtmega.com/widget/element-light-box/)
+25. [Inline Menu - 10 Styles ](https://wphtmega.com/widget/element-inline-menu/)
+26. [User Login - 5 Styles ](https://wphtmega.com/widget/element-user-login/)
+27. [User Register - 5 Styles ](https://wphtmega.com/widget/element-user-register/)
+28. [Image Marker - 5 Styles ](https://wphtmega.com/widget/element-image-marker/)
+29. [Modals - 5 Styles ](https://wphtmega.com/widget/element-modal/)
+30. [Subscribe News Letter - 5 Styles ](https://wphtmega.com/widget/element-subscribe/)
+31. [News Ticker - 7 Styles ](https://wphtmega.com/widget/element-news-ticker/)
+32. [Notification - 4 Styles ](https://wphtmega.com/widget/element-notification/)
+33. [Offcanvas - 4 Styles ](https://wphtmega.com/widget/element-off-canvas/)
+34. [Panel Slider - 4 Styles ](https://wphtmega.com/widget/element-panel-slider/)
+35. [Popovers - 4 Styles ](https://wphtmega.com/widget/element-popover/)
+36. [Post carosel - 5 Styles ](https://wphtmega.com/widget/post-carosul/)
+37. [Post Grid - 5 Styles ](https://wphtmega.com/widget/element-post-grid/)
+38. [Post Grid Tab - 5 Styles ](https://wphtmega.com/widget/element-post-grid-tab/)
+39. [Post Slider - 5 Styles ](https://wphtmega.com/widget/element-post-slider/)
+40. [Pricing List View - 3 Styles ](https://wphtmega.com/widget/element-pricing-list-view/)
+41. [Pricing Table - 7 Styles ](https://wphtmega.com/widget/element-pricing-table/)
+42. [Progress Bar - 10 Styles ](https://wphtmega.com/widget/element-progress-bar/)
+43. [Scroll Image - 2 Styles ](https://wphtmega.com/widget/element-scroll-image/)
+44. [Scroll Navigation - 4 Styles ](https://wphtmega.com/widget/element-scroll-navigation/)
+45. [Search - 5 Styles ](https://wphtmega.com/widget/elementor-search/)
+46. [Services - 7 Styles ](https://wphtmega.com/widget/element-services/)
+47. [Single Post - 5 Styles ](https://wphtmega.com/widget/element-single-post/)
+48. [Social Share - 9 Styles ](https://wphtmega.com/widget/element-social-shere/)
+49. [Switcher Share - 9 Styles ](https://wphtmega.com/widget/element-switcher/)
+50. [Tab - 5 Styles ](https://wphtmega.com/widget/element-tab/)
+51. [Data Table - 3 Styles ](https://wphtmega.com/widget/element-data-table/)
+52. [Team Member - 8 Styles ](https://wphtmega.com/widget/element-team-member/)
+53. [Testimonial carosel - 5 Styles ](https://wphtmega.com/widget/element-testimonial/)
+54. [Testimonial Grid - 5 Styles ](https://wphtmega.com/widget/element-testimonial-grid/)
+55. [Thumbnails Gallery - 4 Styles ](https://wphtmega.com/widget/element-thumbnails-gallery/)
+56. [Toggle - 3 Styles ](https://wphtmega.com/widget/element-toggle/)
+57. [Tool Tip - 4 Styles ](https://wphtmega.com/widget/element-tooltip/)
+58. [Twitter Feed - 5 Styles ](https://wphtmega.com/widget/element-twitter-feed/)
+59. [Verticle Timeline - 3 Styles ](https://wphtmega.com/widget/element-vertical-timeline/)
+60. [Video Player - 4 Styles ](https://wphtmega.com/widget/elementor-video-player/)
+61. [Weather - 3 Styles ](https://wphtmega.com/widget/element-weather/)
+62. [Working Process - 4 Styles ](https://wphtmega.com/widget/element-working-process/)
+63. [404 Page Content - 4 Styles ](https://wphtmega.com/widget/element-page-not-found-content/)
+64. [BBPress](https://wphtmega.com/widget/element-bbpress/)
+65. [Booked Calender](https://wphtmega.com/widget/element-booked-calender/)
+66. [BuddyPress](https://wphtmega.com/widget/element-buddypress/)
+67. [Caldera Forms](https://wphtmega.com/widget/element-caldera-forms/)
+68. [Download monitor](https://wphtmega.com/widget/element-download-monitor/)
+69. [Easy digital downloads](https://wphtmega.com/widget/element-easy-digital-downloads/)
+70. [Event Countdown](https://wphtmega.com/widget/element-event-countdown/)
+71. [Gravity Forms](https://wphtmega.com/widget/element-gravity-forms/)
+72. [Instagram Feed](https://wphtmega.com/widget/element-instagram-feed/)
+73. [Instagram Feed](https://wphtmega.com/widget/element-instagram-feed/)
+74. [Job Manager](https://wphtmega.com/widget/element-job-manager/)
+75. [LayerSlider](https://wphtmega.com/widget/element-layer-slider/)
+76. [Ninja Form](https://wphtmega.com/widget/element-ninja-form/)
+77. [QU Form](https://wphtmega.com/widget/element-quform/)
+78. [TablePress](https://wphtmega.com/widget/element-tablepress/)
+79. [MailChimp for WP](https://wphtmega.com/widget/element-subscribe/)
+80. [WP Forms](https://wphtmega.com/widget/element-wp-forms/)
+81. [WooCommerce add to cart](https://wphtmega.com/widget/element-woocommerce-add-to-cart/)
+82. [WooCommerce Category](https://wphtmega.com/widget/element-woocommerce-category/)
+83. [WooCommerce Cart Page](https://wphtmega.com/widget/element-woocommerce-cart-page/)
+84. [WooCommerce Checkout Page](https://wphtmega.com/widget/element-checkout-page/)
+85. [Special Day Offer](https://wphtmega.com/widget/element-special-day-offer/)
 
 
 == Features: ==
@@ -133,7 +133,7 @@ This feature allows creating menu or mega menu using the Elementor page builder.
 * 39 Categories / Template  Sets 
 * 491 Page Templates
 
-[PURCHASE HT Mega PRO FROM OUR WEBSITE]( http://bit.ly/31fFdMT )
+[PURCHASE HT Mega PRO FROM OUR WEBSITE]( https://hasthemes.com/plugins/ht-mega-pro/#pricing )
 
 > ##Are you searching for WooCommerce ELementor Addon? 
 > Try to use our best WooCommerce ELementor Addon - WooLentor
@@ -147,7 +147,7 @@ This feature allows creating menu or mega menu using the Elementor page builder.
 == Common Issues and Solutions: ==
 1. Elementor editor fails to load
 Ans. It is due to your server PHP setting. You can increase PHP memory limit from wp-config.php file or php.ini file 
-[View Documentation](https://htplugins.com/how-to-increase-php-memory-limit-in-wordpress/)
+[View Documentation](https://wphtmega.com/docs/how-to-increase-php-memory-limit-in-wordpress/)
 
 == Ask for it to your host ==
 > I’m interested in running the open-source [WordPress](https://wordpress.org/) web software and I was wondering if my account supported the following:
@@ -160,7 +160,7 @@ Ans. It is due to your server PHP setting. You can increase PHP memory limit fro
 == Need Help? ==
 Is there any feature that you want to get in this plugins? 
 Needs assistance to use this plugins? 
-Feel free to [Contact us](https://htplugins.com/contact-us/)
+Feel free to [Contact us](https://hasthemes.com/contact-us/)
 
 == Check out our other projects ==
 * [WooLentor](https://wordpress.org/plugins/woolentor-addons/) - WooCommerce page builder for Elementor Addon. Create unlimited product grid, layouts, custom product and shop pages layouts.
@@ -170,6 +170,11 @@ Feel free to [Contact us](https://htplugins.com/contact-us/)
 Visit [HasThemes](https://hasthemes.com/) for more details about HTML, Shopify and WordPress products and services.
 
 == Changelog ==
+
+= Version: 1.6.4 - Date: 2021-09-02 =
+* Fixed: Offcanvas menu doesn't open when click on icon. - "Offcanvas Addon"
+* Improved: When center mode enabled the scroll items option will dissappear from this version. Since Center mode & Scroll Items option doesn't work together. - "Testimonial Addon"
+* Added:  Option to change color of bar & arrows. - "Working Process Addon"
 
 = Version: 1.6.3 - Date: 2021-08-14 =
 * Fixed: Scroll navigation addon animation

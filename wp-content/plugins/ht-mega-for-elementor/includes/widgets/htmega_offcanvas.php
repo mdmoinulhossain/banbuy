@@ -458,7 +458,7 @@ class HTMega_Elementor_Widget_Offcanvas extends Widget_Base {
 
                     $('body').on('click' ,function(e) {
                         var $target = e.target;
-                        if(!$($target).is('.canvas-btn') && !$($target).parents().is('.site-menu') && !$($target).is('.site-menu')){
+                        if(!$($target).is('.canvas-btn') && !$($target).is('.canvas-btn i') && !$($target).parents().is('.site-menu') && !$($target).is('.site-menu')){
                             $('.canvas-btn').removeClass('active');
                             $('.site-menu').removeClass('show-nav');
                             $('body').removeClass('show-overlay');

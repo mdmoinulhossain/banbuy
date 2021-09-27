@@ -137,19 +137,19 @@ class WL_Store_Features_Element extends Widget_Base {
                     'options' => [
                         'left' => [
                             'title' => __( 'Left', 'woolentor' ),
-                            'icon' => 'fa fa-align-left',
+                            'icon' => 'eicon-text-align-left',
                         ],
                         'center' => [
                             'title' => __( 'Center', 'woolentor' ),
-                            'icon' => 'fa fa-align-center',
+                            'icon' => 'eicon-text-align-center',
                         ],
                         'right' => [
                             'title' => __( 'Right', 'woolentor' ),
-                            'icon' => 'fa fa-align-right',
+                            'icon' => 'eicon-text-align-right',
                         ],
                         'justify' => [
                             'title' => __( 'Justified', 'woolentor' ),
-                            'icon' => 'fa fa-align-justify',
+                            'icon' => 'eicon-text-align-justify',
                         ],
                     ],
                     'selectors' => [

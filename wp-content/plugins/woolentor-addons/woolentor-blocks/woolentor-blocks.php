@@ -78,7 +78,11 @@ endif;
  *
  */
 function woolentorblocks() {
-	return WooLentorBlocks::instance();
+	if ( ! empty( $_REQUEST['action'] ) && 'elementor' === $_REQUEST['action'] ) {
+		return;
+	}else{
+		return WooLentorBlocks::instance();
+	}
 }
 
 // Get the plugin running. Load on plugins_loaded action to avoid issue on multisite.

@@ -1,0 +1,44 @@
+<wpml-config>
+    <admin-texts>
+        <key name="woolentor_woo_template_tabs">
+            <key name="enablecustomlayout"/>
+            <key name="shoppageproductlimit"/>
+            <key name="singleproductpage"/>
+            <key name="productarchivepage"/>
+            <key name="productallarchivepage"/>
+            <key name="productcartpage"/>
+            <key name="productemptycartpage"/>
+            <key name="productcheckoutpage"/>
+            <key name="productcheckouttoppage"/>
+            <key name="productthankyoupage"/>
+            <key name="productmyaccountpage"/>
+            <key name="productmyaccountloginpage"/>
+            <key name="productquickview"/>
+            <key name="mini_cart_layout"/>
+        </key>
+        <key name="woolentor_rename_label_tabs">
+            <key name="enablerenamelabel"/>
+            <key name="shop_page_heading"/>
+            <key name="wl_shop_add_to_cart_txt"/>
+            <key name="product_details_page_heading"/>
+            <key name="wl_add_to_cart_txt"/>
+            <key name="wl_description_tab_menu_titlep"/>
+            <key name="wl_additional_information_tab_menu_titlep"/>
+            <key name="wl_reviews_tab_menu_titlep"/>
+            <key name="checkout_page_headingp"/>
+            <key name="wl_checkout_firstname_labelp"/>
+            <key name="wl_checkout_lastname_labelp"/>
+            <key name="wl_checkout_company_labelp"/>
+            <key name="wl_checkout_address_1_labelp"/>
+            <key name="wl_checkout_address_2_labelp"/>
+            <key name="wl_checkout_city_labelp"/>
+            <key name="wl_checkout_postcode_labelp"/>
+            <key name="wl_checkout_state_labelp"/>
+            <key name="wl_checkout_phone_labelp"/>
+            <key name="wl_checkout_email_labelp"/>
+            <key name="wl_checkout_country_labelp"/>
+            <key name="wl_checkout_ordernote_labelp"/>
+            <key name="wl_checkout_placeorder_btn_txtp"/>
+        </key>
+    </admin-texts>
+</wpml-config>

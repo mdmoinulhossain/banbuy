@@ -60,6 +60,17 @@ class Api {
             ]
         );
 
+        register_rest_route( $this->namespace, 'imagesizes', 
+            [
+                'methods' => WP_REST_Server::READABLE,
+                'args' => [
+                    'wpnonce'  => []
+                ],
+                'callback' => [ $this, 'get_image_sizes' ],
+                'permission_callback' => '__return_true'
+            ]
+        );
+
 	}
 
     /**
@@ -83,6 +94,20 @@ class Api {
         }
 
         $data = woolentorBlocks_taxnomy_data( $request['querySlug'], $request['queryLimit'], $request['queryOrder'], $request['queryType'] );
+        return rest_ensure_response( $data );
+
+    }
+
+    /**
+     * Get Image sizes data
+     */
+    public function get_image_sizes( $request ){
+        
+        if ( !wp_verify_nonce( $_REQUEST['wpnonce'], 'woolentorblock-nonce') ){
+            return rest_ensure_response([]);
+        }
+
+        $data = woolentorBlocks_get_image_size();
         return rest_ensure_response( $data );
 
     }
@@ -143,7 +168,6 @@ class Api {
                 $time           = current_time('timestamp');
 		        $time_to        = strtotime( $product->get_date_on_sale_to() );
                 $item['deal']   = ( $item['price_sale'] && $time_to > $time ) ? date( 'Y/m/d', $time_to ) : '';
-
 
                 // Images
                 if( has_post_thumbnail() ){

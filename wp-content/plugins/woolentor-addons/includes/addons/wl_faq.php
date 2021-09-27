@@ -252,7 +252,7 @@ class WL_Faq_Element extends Widget_Base {
         $this->start_controls_section(
             'accordion_item_style',
             [
-                'label' => esc_html__( 'FAQ Item', 'woolentor' ),
+                'label' => esc_html__( 'Item', 'woolentor' ),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -260,7 +260,7 @@ class WL_Faq_Element extends Widget_Base {
             $this->add_responsive_control(
                 'accordion_item_spacing',
                 [
-                    'label' => esc_html__( 'FAQ Item Spacing', 'woolentor' ),
+                    'label' => esc_html__( 'Item Spacing', 'woolentor' ),
                     'type'  => Controls_Manager::SLIDER,
                     'range' => [
                         'px' => [
@@ -335,7 +335,7 @@ class WL_Faq_Element extends Widget_Base {
         $this->start_controls_section(
             'accordion_title_style',
             [
-                'label'     => esc_html__( 'FAQ Title', 'woolentor' ),
+                'label'     => esc_html__( 'Title', 'woolentor' ),
                 'tab'       => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -348,15 +348,15 @@ class WL_Faq_Element extends Widget_Base {
                     'options' => [
                         'start'    => [
                             'title' => esc_html__( 'Left', 'woolentor' ),
-                            'icon'  => 'fa fa-align-left',
+                            'icon'  => 'eicon-text-align-left',
                         ],
                         'center' => [
                             'title' => esc_html__( 'Center', 'woolentor' ),
-                            'icon'  => 'fa fa-align-center',
+                            'icon'  => 'eicon-text-align-center',
                         ],
                         'end' => [
                             'title' => esc_html__( 'Right', 'woolentor' ),
-                            'icon'  => 'fa fa-align-right',
+                            'icon'  => 'eicon-text-align-right',
                         ],
                     ],
                     'selectors' => [
@@ -537,7 +537,7 @@ class WL_Faq_Element extends Widget_Base {
         $this->start_controls_section(
             'accordion_content_style',
             [
-                'label'     => esc_html__( 'FAQ Content', 'woolentor' ),
+                'label'     => esc_html__( 'Content', 'woolentor' ),
                 'tab'       => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -571,15 +571,15 @@ class WL_Faq_Element extends Widget_Base {
                     'options' => [
                         'left'    => [
                             'title' => esc_html__( 'Left', 'woolentor' ),
-                            'icon'  => 'fa fa-align-left',
+                            'icon'  => 'eicon-text-align-left',
                         ],
                         'center' => [
                             'title' => esc_html__( 'Center', 'woolentor' ),
-                            'icon'  => 'fa fa-align-center',
+                            'icon'  => 'eicon-text-align-center',
                         ],
                         'right' => [
                             'title' => esc_html__( 'Right', 'woolentor' ),
-                            'icon'  => 'fa fa-align-right',
+                            'icon'  => 'eicon-text-align-right',
                         ],
                     ],
                     'selectors' => [
@@ -606,7 +606,7 @@ class WL_Faq_Element extends Widget_Base {
         $this->start_controls_section(
             'accordion_icon_style',
             [
-                'label'     => esc_html__( 'FAQ Icon', 'woolentor' ),
+                'label'     => esc_html__( 'Icon', 'woolentor' ),
                 'tab'       => Controls_Manager::TAB_STYLE,
             ]
         );
